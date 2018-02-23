@@ -77,12 +77,7 @@
 	quid       	"39C9260C00D6"
 	exportControl 	"Public"
 	global     	TRUE
-	logical_models 	(list unit_reference_list
-	    (object Class_Category "NewPackage"
-		quid       	"5A825CA802EE"
-		exportControl 	"Public"
-		logical_models 	(list unit_reference_list)
-		logical_presentations 	(list unit_reference_list)))
+	logical_models 	(list unit_reference_list)
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
 		quid       	"39C9261001B7"
@@ -100,390 +95,6 @@
 	subsystem  	"Component View"
 	quidu      	"39C9260C00D7"
 	logical_models 	(list unit_reference_list
-	    (object Class "AVFormatContext"
-		quid       	"5A823E88037E"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "nb_streams"
-			quid       	"5A823ECD0029")
-		    (object ClassAttribute "probesize"
-			quid       	"5A82528C0003")
-		    (object ClassAttribute "format_probesize"
-			quid       	"5A8246DB03AD")
-		    (object ClassAttribute "video_codec"
-			quid       	"5A82517A037E")
-		    (object ClassAttribute "audio_codec"
-			quid       	"5A8251EE01E9")
-		    (object ClassAttribute "subtitle_codec"
-			quid       	"5A8251F401B9")))
-	    (object Class "AVInputFormat"
-		quid       	"5A823EED0205"
-		superclasses 	(list inheritance_relationship_list
-		    (object Inheritance_Relationship
-			quid       	"5A823F2C0153"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"))
-		used_nodes 	(list uses_relationship_list
-		    (object Uses_Relationship
-			quid       	"5A82417D0393"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"))
-		realized_interfaces 	(list realize_rel_list
-		    (object Realize_Relationship
-			quid       	"5A823F360333"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"))
-		operations 	(list Operations
-		    (object Operation "read_probe"
-			quid       	"5A82544101ED"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "read_header"
-			quid       	"5A8254480191"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "read_packet"
-			quid       	"5A8254500272"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "read_close"
-			quid       	"5A82545E0109"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "read_seek"
-			quid       	"5A82546201DA"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)))
-	    (object Class "NewInterface2"
-		quid       	"5A823F8D018A"
-		stereotype 	"Interface")
-	    (object Class "AVOutputFormat"
-		quid       	"5A824632014F"
-		operations 	(list Operations
-		    (object Operation "write_header"
-			quid       	"5A825562002A"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "write_trailer"
-			quid       	"5A82556B0356"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "write_packet"
-			quid       	"5A8255730266"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)))
-	    (object Class "AVIOContext"
-		quid       	"5A82466E0105"
-		operations 	(list Operations
-		    (object Operation "read_packet"
-			quid       	"5A8247D200E7"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "write_packet"
-			quid       	"5A8247E30395"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "seek"
-			quid       	"5A8247E7021D"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "buffer"
-			quid       	"5A8247FF0025")
-		    (object ClassAttribute "buffer_ptr"
-			quid       	"5A8248010353")
-		    (object ClassAttribute "buffer_end"
-			quid       	"5A824806006A")
-		    (object ClassAttribute "write_flag"
-			quid       	"5A82480A009A")))
-	    (object Class "AVStream"
-		quid       	"5A8246A90062"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "index"
-			quid       	"5A8248B20034")
-		    (object ClassAttribute "duration"
-			quid       	"5A8248C60035")
-		    (object ClassAttribute "codecpar"
-			quid       	"5A8248F70021")
-		    (object ClassAttribute "time_base"
-			quid       	"5A824DC6031C")
-		    (object ClassAttribute "start_time"
-			quid       	"5A824DCA0134")))
-	    (object Class "AVClass"
-		quid       	"5A824871021D"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "class_name"
-			quid       	"5A8252BB02DD")
-		    (object ClassAttribute "option"
-			quid       	"5A8252C0028A")
-		    (object ClassAttribute "version"
-			quid       	"5A8252C801AB")))
-	    (object Class "AVCodecParameters"
-		quid       	"5A8249020207"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "extradata"
-			quid       	"5A824EFC032C")
-		    (object ClassAttribute "bit_rate"
-			quid       	"5A824F130188")
-		    (object ClassAttribute "format"
-			quid       	"5A824F180330")
-		    (object ClassAttribute "profile"
-			quid       	"5A824F2002D8")
-		    (object ClassAttribute "level"
-			quid       	"5A824F360246")
-		    (object ClassAttribute "channels"
-			quid       	"5A824F38020F")
-		    (object ClassAttribute "sample_rate"
-			quid       	"5A824F81021B")))
-	    (object Class "AVCodecContext"
-		quid       	"5A82498C031E"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "codec_type"
-			quid       	"5A8249DD02FD")
-		    (object ClassAttribute "codec_id"
-			quid       	"5A8249E102F8")
-		    (object ClassAttribute "code_name"
-			quid       	"5A8249E40250")
-		    (object ClassAttribute "width"
-			quid       	"5A824CB70140")
-		    (object ClassAttribute "height"
-			quid       	"5A824CBB0301")
-		    (object ClassAttribute "coded_width"
-			quid       	"5A824CBD01C8")
-		    (object ClassAttribute "codec_height"
-			quid       	"5A824CC203C1")))
-	    (object Class "AVCodec"
-		quid       	"5A824A2003BC"
-		operations 	(list Operations
-		    (object Operation "init_static_data"
-			quid       	"5A824B970299"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "encode2"
-			quid       	"5A824BC902B2"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "decode"
-			quid       	"5A824BCE01A6"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "pix_format"
-			quid       	"5A824ABC0295")
-		    (object ClassAttribute "profiles"
-			quid       	"5A824AC003E4")))
-	    (object Class "AVOption"
-		quid       	"5A82531A0193"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "type"
-			quid       	"5A82538D021D")
-		    (object ClassAttribute "default_value"
-			quid       	"5A82538F02F7")))
-	    (object Association "$UNNAMED$0"
-		quid       	"5A823F9800C0"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$1"
-			quid       	"5A823F9803B0"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$2"
-			quid       	"5A823F9803B2"
-			supplier   	"Logical View::AVInputFormat"
-			quidu      	"5A823EED0205")))
-	    (object Association "$UNNAMED$3"
-		quid       	"5A8241890003"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$4"
-			quid       	"5A8241890202"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$5"
-			quid       	"5A824189020B"
-			supplier   	"Logical View::AVInputFormat"
-			quidu      	"5A823EED0205")))
-	    (object Association "$UNNAMED$6"
-		quid       	"5A8244FB038B"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$7"
-			quid       	"5A8244FD002A"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$8"
-			quid       	"5A8244FD002F"
-			supplier   	"Logical View::AVInputFormat"
-			quidu      	"5A823EED0205"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$9"
-		quid       	"5A82450D03CB"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$10"
-			quid       	"5A82450E0399"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$11"
-			quid       	"5A82450E039C"
-			supplier   	"Logical View::AVInputFormat"
-			quidu      	"5A823EED0205"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$12"
-		quid       	"5A82460C00FC"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$13"
-			quid       	"5A82460D00B4"
-			supplier   	"Logical View::AVInputFormat"
-			quidu      	"5A823EED0205"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$14"
-			quid       	"5A82460D00BD"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$15"
-		quid       	"5A82465A0257"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$16"
-			quid       	"5A82465B00C6"
-			supplier   	"Logical View::AVOutputFormat"
-			quidu      	"5A824632014F"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$17"
-			quid       	"5A82465B00C8"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$18"
-		quid       	"5A8246E9033E"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$19"
-			quid       	"5A8246EA01F6"
-			supplier   	"Logical View::AVIOContext"
-			quidu      	"5A82466E0105"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$20"
-			quid       	"5A8246EA01FB"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$21"
-		quid       	"5A8246F30260"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$22"
-			quid       	"5A8246F40186"
-			supplier   	"Logical View::AVStream"
-			quidu      	"5A8246A90062"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$23"
-			quid       	"5A8246F40188"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$24"
-		quid       	"5A824888010D"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$25"
-			quid       	"5A8248880367"
-			supplier   	"Logical View::AVClass"
-			quidu      	"5A824871021D"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$26"
-			quid       	"5A8248880369"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$27"
-		quid       	"5A82495A03B5"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$28"
-			quid       	"5A82495B01BD"
-			supplier   	"Logical View::AVCodecParameters"
-			quidu      	"5A8249020207"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$29"
-			quid       	"5A82495B01C1"
-			supplier   	"Logical View::AVStream"
-			quidu      	"5A8246A90062"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$30"
-		quid       	"5A8249B603E6"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$31"
-			quid       	"5A8249B800E7"
-			supplier   	"Logical View::AVCodecContext"
-			quidu      	"5A82498C031E"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$32"
-			quid       	"5A8249B800EC"
-			supplier   	"Logical View::AVStream"
-			quidu      	"5A8246A90062"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$33"
-		quid       	"5A824A3C03D2"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$34"
-			quid       	"5A824A3D0181"
-			supplier   	"Logical View::AVCodec"
-			quidu      	"5A824A2003BC"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$35"
-			quid       	"5A824A3D0185"
-			supplier   	"Logical View::AVCodecContext"
-			quidu      	"5A82498C031E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$36"
-		quid       	"5A8251C703C1"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$37"
-			quid       	"5A8251C801B7"
-			supplier   	"Logical View::AVCodec"
-			quidu      	"5A824A2003BC"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$38"
-			quid       	"5A8251C801BD"
-			supplier   	"Logical View::AVFormatContext"
-			quidu      	"5A823E88037E"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$39"
-		quid       	"5A8255F30372"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$40"
-			quid       	"5A8255F400D8"
-			supplier   	"Logical View::AVOption"
-			quidu      	"5A82531A0193"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$41"
-			quid       	"5A8255F400DE"
-			supplier   	"Logical View::AVClass"
-			quidu      	"5A824871021D"
-			is_navigable 	TRUE
-			is_aggregate 	TRUE)))
 	    (object Class_Category "javax"
 		is_unit    	TRUE
 		is_loaded  	FALSE
@@ -500,210 +111,75 @@
 		file_name  	"$FRAMEWORK_PATH\\Shared Components\\j2se_1_3_org.cat"
 		quid       	"39C92693036F"))
 	statemachine 	(object State_Machine "State/Activity Model"
-	    quid       	"5A825CE30118"
+	    quid       	"5A8FB957024A"
 	    states     	(list States
-		(object State "avformat_open_input"
-		    quid       	"5A825CEB01D1"
+		(object State "header.mp4"
+		    quid       	"5A8FB96C034F"
 		    type       	"Normal")
-		(object State "1.init_input"
-		    quid       	"5A825D8B02C8"
+		(object State "data0.m4s"
+		    quid       	"5A8FB97000D0"
 		    type       	"Normal")
-		(object State "dfad"
-		    quid       	"5A825DA7022B"
+		(object State "out.mp4"
+		    quid       	"5A8FB997022F"
 		    type       	"Normal")
-		(object State "2.io_open_default"
-		    quid       	"5A825DD901CC"
+		(object State "ffmpeg remuxer"
+		    quid       	"5A8FB9B10288"
 		    type       	"Normal")
-		(object State "10.av_probe_input_buffer2"
-		    quid       	"5A825DDC0155"
-		    type       	"Normal")
-		(object State "11.avio_read"
-		    quid       	"5A825DF401E9"
-		    type       	"Normal")
-		(object State "12.av_probe_input_format2"
-		    quid       	"5A825DF60154"
-		    type       	"Normal")
-		(object State "15.ffio_rewind_with_probe_data"
-		    quid       	"5A825DF703DD"
-		    type       	"Normal")
-		(object State "13.av_probe_input_format3"
-		    quid       	"5A825E850113"
-		    type       	"Normal")
-		(object State "14.read_probe"
-		    quid       	"5A825E88017D"
-		    type       	"Normal")
-		(object State "3.ffio_open_whitelist"
-		    quid       	"5A8261490159"
-		    type       	"Normal")
-		(object State "4.ffurl_open_whitelist"
-		    quid       	"5A8261740167"
-		    statemachine 	(object State_Machine "State/Activity Model2"
-			quid       	"5A8261ED0315"
-			states     	(list States
-			    (object State "NewState"
-				quid       	"5A8261ED031A"
-				type       	"Normal"))
-			partitions 	(list Partitions)
-			objects    	(list Objects)
-			transitions 	(list transition_list)
-			objectflows 	(list objectflow_list)
-			statediagrams 	(list StateDiagrams))
-		    type       	"Normal")
-		(object State "5.ffurl_alloc"
-		    quid       	"5A82619802B4"
-		    type       	"Normal")
-		(object State "8.ffurl_connect"
-		    quid       	"5A82619D01B4"
-		    type       	"Normal")
-		(object State "6.url_find_protocol"
-		    quid       	"5A8261C8001E"
-		    type       	"Normal")
-		(object State "7.url_alloc_for_protocol"
-		    quid       	"5A8261DA021F"
-		    type       	"Normal")
-		(object State "9.ffio_fdopen"
-		    quid       	"5A827B3902A6"
+		(object State "out.ts"
+		    quid       	"5A8FC45E030C"
 		    type       	"Normal"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
 		(object State_Transition
-		    quid       	"5A825DA1017A"
-		    supplier   	"Logical View::State/Activity Model::1.init_input"
-		    supplier_quidu 	"5A825D8B02C8"
-		    client     	"Logical View::State/Activity Model::avformat_open_input"
-		    client_quidu 	"5A825CEB01D1"
+		    quid       	"5A8FB9CE02BB"
+		    supplier   	"Logical View::State/Activity Model::out.mp4"
+		    supplier_quidu 	"5A8FB997022F"
+		    client     	"Logical View::State/Activity Model::header.mp4"
+		    client_quidu 	"5A8FB96C034F"
 		    sendEvent  	(object sendEvent
-			quid       	"5A825DA1017D"))
+			quid       	"5A8FB9CE02BE"))
 		(object State_Transition
-		    quid       	"5A825E1E0279"
-		    supplier   	"Logical View::State/Activity Model::2.io_open_default"
-		    supplier_quidu 	"5A825DD901CC"
-		    client     	"Logical View::State/Activity Model::1.init_input"
-		    client_quidu 	"5A825D8B02C8"
+		    quid       	"5A8FB9D400A2"
+		    supplier   	"Logical View::State/Activity Model::out.mp4"
+		    supplier_quidu 	"5A8FB997022F"
+		    client     	"Logical View::State/Activity Model::data0.m4s"
+		    client_quidu 	"5A8FB97000D0"
 		    sendEvent  	(object sendEvent
-			quid       	"5A825E1E027C"))
+			quid       	"5A8FB9D400A5"))
 		(object State_Transition
-		    quid       	"5A825E21006A"
-		    supplier   	"Logical View::State/Activity Model::10.av_probe_input_buffer2"
-		    supplier_quidu 	"5A825DDC0155"
-		    client     	"Logical View::State/Activity Model::1.init_input"
-		    client_quidu 	"5A825D8B02C8"
+		    quid       	"5A8FB9DA030C"
+		    supplier   	"Logical View::State/Activity Model::ffmpeg remuxer"
+		    supplier_quidu 	"5A8FB9B10288"
+		    client     	"Logical View::State/Activity Model::out.mp4"
+		    client_quidu 	"5A8FB997022F"
 		    sendEvent  	(object sendEvent
-			quid       	"5A825E21006D"))
+			quid       	"5A8FB9DA030F"))
 		(object State_Transition
-		    quid       	"5A825EB00016"
-		    supplier   	"Logical View::State/Activity Model::11.avio_read"
-		    supplier_quidu 	"5A825DF401E9"
-		    client     	"Logical View::State/Activity Model::10.av_probe_input_buffer2"
-		    client_quidu 	"5A825DDC0155"
+		    quid       	"5A8FC48B0367"
+		    supplier   	"Logical View::State/Activity Model::out.ts"
+		    supplier_quidu 	"5A8FC45E030C"
+		    client     	"Logical View::State/Activity Model::ffmpeg remuxer"
+		    client_quidu 	"5A8FB9B10288"
 		    sendEvent  	(object sendEvent
-			quid       	"5A825EB00019"))
-		(object State_Transition
-		    quid       	"5A825EB30005"
-		    supplier   	"Logical View::State/Activity Model::12.av_probe_input_format2"
-		    supplier_quidu 	"5A825DF60154"
-		    client     	"Logical View::State/Activity Model::10.av_probe_input_buffer2"
-		    client_quidu 	"5A825DDC0155"
-		    sendEvent  	(object sendEvent
-			quid       	"5A825EB30008"))
-		(object State_Transition
-		    quid       	"5A825EB60101"
-		    supplier   	"Logical View::State/Activity Model::15.ffio_rewind_with_probe_data"
-		    supplier_quidu 	"5A825DF703DD"
-		    client     	"Logical View::State/Activity Model::10.av_probe_input_buffer2"
-		    client_quidu 	"5A825DDC0155"
-		    sendEvent  	(object sendEvent
-			quid       	"5A825EB60104"))
-		(object State_Transition
-		    quid       	"5A825EB90330"
-		    supplier   	"Logical View::State/Activity Model::13.av_probe_input_format3"
-		    supplier_quidu 	"5A825E850113"
-		    client     	"Logical View::State/Activity Model::12.av_probe_input_format2"
-		    client_quidu 	"5A825DF60154"
-		    sendEvent  	(object sendEvent
-			quid       	"5A825EB90333"))
-		(object State_Transition
-		    quid       	"5A825EBC01C8"
-		    supplier   	"Logical View::State/Activity Model::14.read_probe"
-		    supplier_quidu 	"5A825E88017D"
-		    client     	"Logical View::State/Activity Model::13.av_probe_input_format3"
-		    client_quidu 	"5A825E850113"
-		    sendEvent  	(object sendEvent
-			quid       	"5A825EBC01CB"))
-		(object State_Transition
-		    quid       	"5A8261E70354"
-		    supplier   	"Logical View::State/Activity Model::3.ffio_open_whitelist"
-		    supplier_quidu 	"5A8261490159"
-		    client     	"Logical View::State/Activity Model::2.io_open_default"
-		    client_quidu 	"5A825DD901CC"
-		    sendEvent  	(object sendEvent
-			quid       	"5A8261E70357"))
-		(object State_Transition
-		    quid       	"5A8261EA01CC"
-		    supplier   	"Logical View::State/Activity Model::4.ffurl_open_whitelist"
-		    supplier_quidu 	"5A8261740167"
-		    client     	"Logical View::State/Activity Model::3.ffio_open_whitelist"
-		    client_quidu 	"5A8261490159"
-		    sendEvent  	(object sendEvent
-			quid       	"5A8261EA01CF"))
-		(object State_Transition
-		    quid       	"5A82620701C4"
-		    supplier   	"Logical View::State/Activity Model::6.url_find_protocol"
-		    supplier_quidu 	"5A8261C8001E"
-		    client     	"Logical View::State/Activity Model::5.ffurl_alloc"
-		    client_quidu 	"5A82619802B4"
-		    sendEvent  	(object sendEvent
-			quid       	"5A82620701C7"))
-		(object State_Transition
-		    quid       	"5A82620A0056"
-		    supplier   	"Logical View::State/Activity Model::7.url_alloc_for_protocol"
-		    supplier_quidu 	"5A8261DA021F"
-		    client     	"Logical View::State/Activity Model::5.ffurl_alloc"
-		    client_quidu 	"5A82619802B4"
-		    sendEvent  	(object sendEvent
-			quid       	"5A82620A0059"))
-		(object State_Transition
-		    quid       	"5A82621200B6"
-		    supplier   	"Logical View::State/Activity Model::5.ffurl_alloc"
-		    supplier_quidu 	"5A82619802B4"
-		    client     	"Logical View::State/Activity Model::4.ffurl_open_whitelist"
-		    client_quidu 	"5A8261740167"
-		    sendEvent  	(object sendEvent
-			quid       	"5A82621200B9"))
-		(object State_Transition
-		    quid       	"5A826215007E"
-		    supplier   	"Logical View::State/Activity Model::8.ffurl_connect"
-		    supplier_quidu 	"5A82619D01B4"
-		    client     	"Logical View::State/Activity Model::4.ffurl_open_whitelist"
-		    client_quidu 	"5A8261740167"
-		    sendEvent  	(object sendEvent
-			quid       	"5A8262150081"))
-		(object State_Transition
-		    quid       	"5A827BC801D8"
-		    supplier   	"Logical View::State/Activity Model::9.ffio_fdopen"
-		    supplier_quidu 	"5A827B3902A6"
-		    client     	"Logical View::State/Activity Model::3.ffio_open_whitelist"
-		    client_quidu 	"5A8261490159"
-		    sendEvent  	(object sendEvent
-			quid       	"5A827BC801DB")))
+			quid       	"5A8FC48B036A")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
-		(object ActivityDiagram "avformat_open_input"
-		    quid       	"5A825CE30134"
-		    title      	"avformat_open_input"
+		(object ActivityDiagram "NewDiagram"
+		    quid       	"5A8FB957026A"
+		    title      	"NewDiagram"
 		    zoom       	100
 		    max_height 	28350
 		    max_width  	21600
 		    origin_x   	0
-		    origin_y   	0
+		    origin_y   	944
 		    items      	(list diagram_item_list
 			(object Swimlane "" @1
 			    line_color 	3342489
 			    width      	450)
-			(object StateView "Normal" "avformat_open_input" @2
+			(object StateView "Normal" "header.mp4" @2
 			    Parent_View 	@1
-			    location   	(960, 288)
+			    location   	(1092, 336)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -715,23 +191,23 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@2
-				location   	(960, 278)
+				location   	(1092, 320)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	422
+				max_width  	228
 				justify    	0
-				label      	"avformat_open_input")
+				label      	"header.mp4")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5A825CEB01D1"
-			    width      	519
-			    height     	132
+			    quidu      	"5A8FB96C034F"
+			    width      	325
+			    height     	144
 			    autoResize 	TRUE)
-			(object StateView "Normal" "1.init_input" @3
+			(object StateView "Normal" "data0.m4s" @3
 			    Parent_View 	@1
-			    location   	(1728, 288)
+			    location   	(1584, 336)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -743,33 +219,23 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@3
-				location   	(1728, 277)
+				location   	(1584, 320)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	204
+				max_width  	228
 				justify    	0
-				label      	"1.init_input")
+				label      	"data0.m4s")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5A825D8B02C8"
-			    height     	134
+			    quidu      	"5A8FB97000D0"
+			    width      	325
+			    height     	144
 			    autoResize 	TRUE)
-			(object TransView "" @4
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825DA1017A"
-			    client     	@2
-			    supplier   	@3
-			    vertices   	(list Points
-				(1219, 288)
-				(1578, 288))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "2.io_open_default" @5
+			(object StateView "Normal" "out.mp4" @4
 			    Parent_View 	@1
-			    location   	(1552, 560)
+			    location   	(1360, 672)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -780,35 +246,45 @@
 				color      	0
 				default_color 	TRUE)
 			    label      	(object ItemLabel
-				Parent_View 	@5
-				location   	(1552, 551)
+				Parent_View 	@4
+				location   	(1360, 661)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	316
+				max_width  	204
 				justify    	0
-				label      	"2.io_open_default")
+				label      	"out.mp4")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5A825DD901CC"
-			    width      	412
-			    height     	130
+			    quidu      	"5A8FB997022F"
+			    height     	134
 			    autoResize 	TRUE)
+			(object TransView "" @5
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5A8FB9CE02BB"
+			    client     	@2
+			    supplier   	@4
+			    vertices   	(list Points
+				(1149, 407)
+				(1306, 605))
+			    line_style 	0
+			    x_offset   	FALSE)
 			(object TransView "" @6
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5A825E1E0279"
+			    quidu      	"5A8FB9D400A2"
 			    client     	@3
-			    supplier   	@5
+			    supplier   	@4
 			    vertices   	(list Points
-				(1684, 354)
-				(1594, 495))
+				(1536, 408)
+				(1404, 605))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object StateView "Normal" "10.av_probe_input_buffer2" @7
+			(object StateView "Normal" "ffmpeg remuxer" @7
 			    Parent_View 	@1
-			    location   	(2224, 560)
+			    location   	(1360, 992)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -820,34 +296,33 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@7
-				location   	(2224, 550)
+				location   	(1360, 981)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	572
+				max_width  	204
 				justify    	0
-				label      	"10.av_probe_input_buffer2")
+				label      	"ffmpeg remuxer")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5A825DDC0155"
-			    width      	668
-			    height     	132
+			    quidu      	"5A8FB9B10288"
+			    height     	134
 			    autoResize 	TRUE)
 			(object TransView "" @8
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5A825E21006A"
-			    client     	@3
+			    quidu      	"5A8FB9DA030C"
+			    client     	@4
 			    supplier   	@7
 			    vertices   	(list Points
-				(1850, 354)
-				(2103, 493))
+				(1360, 739)
+				(1360, 925))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object StateView "Normal" "11.avio_read" @9
+			(object StateView "Normal" "out.ts" @9
 			    Parent_View 	@1
-			    location   	(1632, 896)
+			    location   	(1365, 1280)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -859,457 +334,28 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@9
-				location   	(1632, 887)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	240
-				justify    	0
-				label      	"11.avio_read")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A825DF401E9"
-			    width      	337
-			    height     	131
-			    autoResize 	TRUE)
-			(object TransView "" @10
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825EB00016"
-			    client     	@7
-			    supplier   	@9
-			    vertices   	(list Points
-				(2107, 626)
-				(1746, 831))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "12.av_probe_input_format2" @11
-			    Parent_View 	@1
-			    location   	(2224, 912)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@11
-				location   	(2224, 893)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	510
-				justify    	0
-				label      	"12.av_probe_input_format2")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A825DF60154"
-			    width      	606
-			    height     	150
-			    autoResize 	TRUE)
-			(object TransView "" @12
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825EB30005"
-			    client     	@7
-			    supplier   	@11
-			    vertices   	(list Points
-				(2224, 626)
-				(2224, 837))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "15.ffio_rewind_with_probe_data" @13
-			    Parent_View 	@1
-			    location   	(3024, 880)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@13
-				location   	(3024, 864)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	666
-				justify    	0
-				label      	"15.ffio_rewind_with_probe_data")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A825DF703DD"
-			    width      	762
-			    height     	144
-			    autoResize 	TRUE)
-			(object TransView "" @14
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825EB60101"
-			    client     	@7
-			    supplier   	@13
-			    vertices   	(list Points
-				(2389, 626)
-				(2844, 808))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "13.av_probe_input_format3" @15
-			    Parent_View 	@1
-			    location   	(2192, 1168)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@15
-				location   	(2192, 1159)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	566
-				justify    	0
-				label      	"13.av_probe_input_format3")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A825E850113"
-			    width      	663
-			    height     	131
-			    autoResize 	TRUE)
-			(object TransView "" @16
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825EB90330"
-			    client     	@11
-			    supplier   	@15
-			    vertices   	(list Points
-				(2214, 987)
-				(2200, 1103))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "14.read_probe" @17
-			    Parent_View 	@1
-			    location   	(2208, 1424)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@17
-				location   	(2208, 1408)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	336
-				justify    	0
-				label      	"14.read_probe")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A825E88017D"
-			    width      	432
-			    height     	144
-			    autoResize 	TRUE)
-			(object TransView "" @18
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A825EBC01C8"
-			    client     	@15
-			    supplier   	@17
-			    vertices   	(list Points
-				(2196, 1233)
-				(2203, 1352))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "3.ffio_open_whitelist" @19
-			    Parent_View 	@1
-			    location   	(1152, 752)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@19
-				location   	(1152, 736)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	386
-				justify    	0
-				label      	"3.ffio_open_whitelist")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A8261490159"
-			    width      	482
-			    height     	144
-			    autoResize 	TRUE)
-			(object TransView "" @20
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A8261E70354"
-			    client     	@5
-			    supplier   	@19
-			    vertices   	(list Points
-				(1416, 625)
-				(1302, 679))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "5.ffurl_alloc" @21
-			    Parent_View 	@1
-			    location   	(672, 1424)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@21
-				location   	(672, 1413)
+				location   	(1365, 1269)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
 				max_width  	204
 				justify    	0
-				label      	"5.ffurl_alloc")
+				label      	"out.ts")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5A82619802B4"
+			    quidu      	"5A8FC45E030C"
 			    height     	134
 			    autoResize 	TRUE)
-			(object StateView "Normal" "8.ffurl_connect" @22
-			    Parent_View 	@1
-			    location   	(1264, 1424)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@22
-				location   	(1264, 1409)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	328
-				justify    	0
-				label      	"8.ffurl_connect")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A82619D01B4"
-			    width      	425
-			    height     	143
-			    autoResize 	TRUE)
-			(object StateView "Normal" "6.url_find_protocol" @23
-			    Parent_View 	@1
-			    location   	(416, 1664)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@23
-				location   	(416, 1658)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	354
-				justify    	0
-				label      	"6.url_find_protocol")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A8261C8001E"
-			    width      	450
-			    height     	125
-			    autoResize 	TRUE)
-			(object TransView "" @24
+			(object TransView "" @10
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5A82620701C4"
-			    client     	@21
-			    supplier   	@23
+			    quidu      	"5A8FC48B0367"
+			    client     	@7
+			    supplier   	@9
 			    vertices   	(list Points
-				(600, 1491)
-				(482, 1602))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "7.url_alloc_for_protocol" @25
-			    Parent_View 	@1
-			    location   	(1024, 1664)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@25
-				location   	(1024, 1655)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	428
-				justify    	0
-				label      	"7.url_alloc_for_protocol")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A8261DA021F"
-			    width      	525
-			    height     	131
-			    autoResize 	TRUE)
-			(object TransView "" @26
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A82620A0056"
-			    client     	@21
-			    supplier   	@25
-			    vertices   	(list Points
-				(770, 1490)
-				(928, 1599))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "4.ffurl_open_whitelist" @27
-			    Parent_View 	@1
-			    location   	(800, 1088)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@27
-				location   	(800, 1078)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	354
-				justify    	0
-				label      	"4.ffurl_open_whitelist")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A8261740167"
-			    width      	450
-			    height     	132
-			    autoResize 	TRUE)
-			(object TransView "" @28
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A82621200B6"
-			    client     	@27
-			    supplier   	@21
-			    vertices   	(list Points
-				(774, 1154)
-				(697, 1357))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object TransView "" @29
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A826215007E"
-			    client     	@27
-			    supplier   	@22
-			    vertices   	(list Points
-				(891, 1153)
-				(1165, 1352))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object TransView "" @30
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A8261EA01CC"
-			    client     	@19
-			    supplier   	@27
-			    vertices   	(list Points
-				(1076, 824)
-				(869, 1021))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "9.ffio_fdopen" @31
-			    Parent_View 	@1
-			    location   	(1344, 1088)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@31
-				location   	(1344, 1079)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	272
-				justify    	0
-				label      	"9.ffio_fdopen")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5A827B3902A6"
-			    width      	369
-			    height     	131
-			    autoResize 	TRUE)
-			(object TransView "" @32
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5A827BC801D8"
-			    client     	@19
-			    supplier   	@31
-			    vertices   	(list Points
-				(1193, 823)
-				(1306, 1023))
+				(1361, 1058)
+				(1363, 1212))
 			    line_style 	0
 			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
@@ -1322,7 +368,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Logical View::java" @33
+		    (object CategoryView "Logical View::java" @11
 			location   	(208, 272)
 			font       	(object Font
 			    size       	10
@@ -1334,7 +380,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@33
+			    Parent_View 	@11
 			    location   	(64, 188)
 			    nlines     	2
 			    max_width  	288
@@ -1346,7 +392,7 @@
 			quidu      	"39C92661003B"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::javax" @34
+		    (object CategoryView "Logical View::javax" @12
 			location   	(656, 272)
 			font       	(object Font
 			    size       	10
@@ -1358,7 +404,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@34
+			    Parent_View 	@12
 			    location   	(512, 188)
 			    nlines     	2
 			    max_width  	288
@@ -1370,7 +416,7 @@
 			quidu      	"39C926610018"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::org" @35
+		    (object CategoryView "Logical View::org" @13
 			location   	(1104, 272)
 			font       	(object Font
 			    size       	10
@@ -1382,7 +428,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@35
+			    Parent_View 	@13
 			    location   	(960, 188)
 			    nlines     	2
 			    max_width  	288
@@ -1403,7 +449,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @36
+		    (object NoteView @14
 			location   	(224, 624)
 			font       	(object Font
 			    size       	10
@@ -1418,7 +464,7 @@
 			fill_color 	12632256
 			width      	300
 			height     	132)
-		    (object NoteView @37
+		    (object NoteView @15
 			location   	(704, 624)
 			font       	(object Font
 			    size       	10
@@ -1433,7 +479,7 @@
 			fill_color 	8421631
 			width      	300
 			height     	132)
-		    (object NoteView @38
+		    (object NoteView @16
 			location   	(1200, 624)
 			font       	(object Font
 			    size       	10
@@ -1448,7 +494,7 @@
 			fill_color 	12615680
 			width      	300
 			height     	132)
-		    (object NoteView @39
+		    (object NoteView @17
 			location   	(1664, 624)
 			font       	(object Font
 			    size       	10
@@ -1463,7 +509,7 @@
 			fill_color 	16777215
 			width      	300
 			height     	132)
-		    (object Label @40
+		    (object Label @18
 			location   	(81, 369)
 			font       	(object Font
 			    size       	12
@@ -1478,7 +524,7 @@
 			max_width  	1163
 			justify    	1
 			label      	"J2EE: Java 2 Platform, Enterprise Edition - v 1.2.1")
-		    (object Label @41
+		    (object Label @19
 			location   	(96, 608)
 			font       	(object Font
 			    size       	10
@@ -1493,7 +539,7 @@
 			max_width  	268
 			justify    	1
 			label      	"Abstract Class")
-		    (object Label @42
+		    (object Label @20
 			location   	(592, 608)
 			font       	(object Font
 			    size       	10
@@ -1508,7 +554,7 @@
 			max_width  	225
 			justify    	1
 			label      	"Final Class")
-		    (object Label @43
+		    (object Label @21
 			location   	(1104, 608)
 			font       	(object Font
 			    size       	10
@@ -1523,7 +569,7 @@
 			max_width  	206
 			justify    	1
 			label      	"Interface")
-		    (object Label @44
+		    (object Label @22
 			location   	(1552, 608)
 			font       	(object Font
 			    size       	10
@@ -1537,706 +583,7 @@
 			nlines     	1
 			max_width  	144
 			justify    	1
-			label      	"Class")))
-	    (object ClassDiagram "FFmpegStruct"
-		quid       	"5A823E82026B"
-		title      	"FFmpegStruct"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::AVCodecParameters" @45
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(3168, 608)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@45
-			    location   	(2959, 377)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	418
-			    justify    	0
-			    label      	"AVCodecParameters")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A8249020207"
-			width      	436
-			height     	486
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AVInputFormat" @46
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(960, 240)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@46
-			    location   	(809, 59)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	302
-			    justify    	0
-			    label      	"AVInputFormat")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A823EED0205"
-			width      	320
-			height     	386
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AVOutputFormat" @47
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(960, 656)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@47
-			    location   	(791, 525)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	338
-			    justify    	0
-			    label      	"AVOutputFormat")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A824632014F"
-			width      	356
-			height     	286
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AVIOContext" @48
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(976, 1168)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@48
-			    location   	(821, 937)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	310
-			    justify    	0
-			    label      	"AVIOContext")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A82466E0105"
-			width      	328
-			height     	486
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AVStream" @49
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2544, 864)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@49
-			    location   	(2424, 683)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	240
-			    justify    	0
-			    label      	"AVStream")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A8246A90062"
-			width      	258
-			height     	386
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$27" @50
-			location   	(2811, 753)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A82495A03B5"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$28" @51
-				Parent_View 	@50
-				location   	(395, -207)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82495B01BD"
-				client     	@50
-				supplier   	@45
-				vertices   	(list Points
-				    (2811, 753)
-				    (2949, 695))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$29" @52
-				Parent_View 	@50
-				location   	(395, -207)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82495B01C1"
-				client     	@50
-				supplier   	@49
-				vertices   	(list Points
-				    (2811, 753)
-				    (2673, 808))
-				line_style 	0)))
-		    (object ClassView "Class" "Logical View::AVCodecContext" @53
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(3360, 1120)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@53
-			    location   	(3188, 889)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	344
-			    justify    	0
-			    label      	"AVCodecContext")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A82498C031E"
-			width      	362
-			height     	486
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$30" @54
-			location   	(2925, 983)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A8249B603E6"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$31" @55
-				Parent_View 	@54
-				location   	(509, 23)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8249B800E7"
-				client     	@54
-				supplier   	@53
-				vertices   	(list Points
-				    (2925, 983)
-				    (3178, 1062))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$32" @56
-				Parent_View 	@54
-				location   	(509, 23)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8249B800EC"
-				client     	@54
-				supplier   	@49
-				vertices   	(list Points
-				    (2925, 983)
-				    (2673, 903))
-				line_style 	0)))
-		    (object ClassView "Class" "Logical View::AVCodec" @57
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2336, 1552)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@57
-			    location   	(2158, 1371)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	356
-			    justify    	0
-			    label      	"AVCodec")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A824A2003BC"
-			width      	374
-			height     	386
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$33" @58
-			location   	(2850, 1334)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A824A3C03D2"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$34" @59
-				Parent_View 	@58
-				location   	(-254, 182)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A824A3D0181"
-				client     	@58
-				supplier   	@57
-				vertices   	(list Points
-				    (2850, 1334)
-				    (2523, 1471))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$35" @60
-				Parent_View 	@58
-				location   	(-254, 182)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A824A3D0185"
-				client     	@58
-				supplier   	@53
-				vertices   	(list Points
-				    (2850, 1334)
-				    (3178, 1195))
-				line_style 	0)))
-		    (object ClassView "Class" "Logical View::AVFormatContext" @61
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1728, 592)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@61
-			    location   	(1545, 386)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	366
-			    justify    	0
-			    label      	"AVFormatContext")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A823E88037E"
-			width      	384
-			height     	436
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$12" @62
-			location   	(1327, 408)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A82460C00FC"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$13" @63
-				Parent_View 	@62
-				location   	(-401, -184)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82460D00B4"
-				client     	@62
-				supplier   	@46
-				vertices   	(list Points
-				    (1327, 408)
-				    (1120, 313))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$14" @64
-				Parent_View 	@62
-				location   	(-401, -184)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82460D00BD"
-				client     	@62
-				supplier   	@61
-				vertices   	(list Points
-				    (1327, 408)
-				    (1535, 502))
-				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$15" @65
-			location   	(1336, 624)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A82465A0257"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$16" @66
-				Parent_View 	@65
-				location   	(-392, 32)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82465B00C6"
-				client     	@65
-				supplier   	@47
-				vertices   	(list Points
-				    (1336, 624)
-				    (1138, 640))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$17" @67
-				Parent_View 	@65
-				location   	(-392, 32)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A82465B00C8"
-				client     	@65
-				supplier   	@61
-				vertices   	(list Points
-				    (1336, 624)
-				    (1535, 607))
-				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$18" @68
-			location   	(1337, 890)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A8246E9033E"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$19" @69
-				Parent_View 	@68
-				location   	(-391, 298)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8246EA01F6"
-				client     	@68
-				supplier   	@48
-				vertices   	(list Points
-				    (1337, 890)
-				    (1140, 1039))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$20" @70
-				Parent_View 	@68
-				location   	(-391, 298)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8246EA01FB"
-				client     	@68
-				supplier   	@61
-				vertices   	(list Points
-				    (1337, 890)
-				    (1535, 738))
-				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$21" @71
-			location   	(2167, 737)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A8246F30260"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$22" @72
-				Parent_View 	@71
-				location   	(439, 145)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8246F40186"
-				client     	@71
-				supplier   	@49
-				vertices   	(list Points
-				    (2167, 737)
-				    (2414, 820))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$23" @73
-				Parent_View 	@71
-				location   	(439, 145)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8246F40188"
-				client     	@71
-				supplier   	@61
-				vertices   	(list Points
-				    (2167, 737)
-				    (1920, 655))
-				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$36" @74
-			location   	(2039, 1084)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A8251C703C1"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$37" @75
-				Parent_View 	@74
-				location   	(311, 492)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8251C801B7"
-				client     	@74
-				supplier   	@57
-				vertices   	(list Points
-				    (2039, 1084)
-				    (2211, 1358))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$38" @76
-				Parent_View 	@74
-				location   	(311, 492)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8251C801BD"
-				client     	@74
-				supplier   	@61
-				vertices   	(list Points
-				    (2039, 1084)
-				    (1865, 810))
-				line_style 	0)))
-		    (object ClassView "Class" "Logical View::AVOption" @77
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2848, 144)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@77
-			    location   	(2706, 38)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	284
-			    justify    	0
-			    label      	"AVOption")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A82531A0193"
-			width      	302
-			height     	236
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AVClass" @78
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2368, 304)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@78
-			    location   	(2232, 173)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	272
-			    justify    	0
-			    label      	"AVClass")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A824871021D"
-			width      	290
-			height     	286
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$24" @79
-			location   	(2071, 437)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A824888010D"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$25" @80
-				Parent_View 	@79
-				location   	(343, -155)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8248880367"
-				client     	@79
-				supplier   	@78
-				vertices   	(list Points
-				    (2071, 437)
-				    (2222, 367))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$26" @81
-				Parent_View 	@79
-				location   	(343, -155)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8248880369"
-				client     	@79
-				supplier   	@61
-				vertices   	(list Points
-				    (2071, 437)
-				    (1920, 504))
-				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$39" @82
-			location   	(2604, 224)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A8255F30372"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$40" @83
-				Parent_View 	@82
-				location   	(236, -80)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8255F400D8"
-				client     	@82
-				supplier   	@77
-				vertices   	(list Points
-				    (2604, 224)
-				    (2696, 193))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$41" @84
-				Parent_View 	@82
-				location   	(236, -80)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A8255F400DE"
-				client     	@82
-				supplier   	@78
-				vertices   	(list Points
-				    (2604, 224)
-				    (2513, 254))
-				line_style 	0)))))))
+			label      	"Class")))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"39C9260C00D7"
 	physical_models 	(list unit_reference_list
@@ -2266,7 +613,7 @@
 		origin_y   	0
 		items      	(list diagram_item_list)))
 	category   	"Logical View"
-	quidu      	"5A823E26018A")
+	quidu      	"5A8FB8DC036B")
     process_structure 	(object Processes
 	quid       	"39C9260C00D8"
 	ProcsNDevs 	(list
