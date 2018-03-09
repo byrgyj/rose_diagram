@@ -11,7 +11,43 @@
 	(object Attribute
 	    tool       	"Java"
 	    name       	"IDE"
-	    value      	"Internal Editor"))
+	    value      	"Internal Editor")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply3"
+	    value      	""))
     quid       	"5A65986F0348"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
@@ -90,7 +126,31 @@
 		    type       	"Normal")
 		(object State "end"
 		    quid       	"5A659A6002B9"
-		    type       	"Normal"))
+		    type       	"Normal")
+		(object State "Ts_RingBuffer"
+		    quid       	"5AA0A6260020"
+		    type       	"Normal")
+		(object State "Audio_RingBuffer"
+		    quid       	"5AA0A6290167"
+		    type       	"Normal")
+		(object State "FFmpeg Run"
+		    quid       	"5AA0A630014E"
+		    type       	"Normal")
+		(object State "Output_RingBuffer"
+		    quid       	"5AA0A6C4029C"
+		    type       	"Normal")
+		(object State "System Player"
+		    quid       	"5AA0A6E800F1"
+		    type       	"Normal")
+		(object Decision "$UNNAMED$0"
+		    quid       	"5AA0A73D00D5")
+		(object State "$UNNAMED$1"
+		    quid       	"5AA0A76502DB"
+		    type       	"Normal")
+		(object Decision "$UNNAMED$2"
+		    quid       	"5AA0A8650386")
+		(object Decision "$UNNAMED$3"
+		    quid       	"5AA0A9520246"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
@@ -165,7 +225,95 @@
 		    client     	"Logical View::State/Activity Model::º∆À„CRC"
 		    client_quidu 	"5A659A46035A"
 		    sendEvent  	(object sendEvent
-			quid       	"5A659B1B0310")))
+			quid       	"5A659B1B0310"))
+		(object State_Transition
+		    quid       	"5AA0A70102A6"
+		    supplier   	"Logical View::State/Activity Model::FFmpeg Run"
+		    supplier_quidu 	"5AA0A630014E"
+		    client     	"Logical View::State/Activity Model::Ts_RingBuffer"
+		    client_quidu 	"5AA0A6260020"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A70102A9"))
+		(object State_Transition
+		    quid       	"5AA0A70603DE"
+		    supplier   	"Logical View::State/Activity Model::FFmpeg Run"
+		    supplier_quidu 	"5AA0A630014E"
+		    client     	"Logical View::State/Activity Model::Audio_RingBuffer"
+		    client_quidu 	"5AA0A6290167"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A70603E1"))
+		(object State_Transition
+		    quid       	"5AA0A70B008F"
+		    supplier   	"Logical View::State/Activity Model::Output_RingBuffer"
+		    supplier_quidu 	"5AA0A6C4029C"
+		    client     	"Logical View::State/Activity Model::FFmpeg Run"
+		    client_quidu 	"5AA0A630014E"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A70B0092"))
+		(object State_Transition
+		    quid       	"5AA0A7100346"
+		    supplier   	"Logical View::State/Activity Model::System Player"
+		    supplier_quidu 	"5AA0A6E800F1"
+		    client     	"Logical View::State/Activity Model::Output_RingBuffer"
+		    client_quidu 	"5AA0A6C4029C"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A7100349"))
+		(object State_Transition
+		    quid       	"5AA0A7510283"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"5AA0A73D00D5"
+		    client     	"Logical View::State/Activity Model::System Player"
+		    client_quidu 	"5AA0A6E800F1"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A7510286"))
+		(object State_Transition
+		    quid       	"5AA0A88C0299"
+		    supplier   	"Logical View::State/Activity Model::end"
+		    supplier_quidu 	"5A659A6002B9"
+		    client     	"$UNNAMED$2"
+		    client_quidu 	"5AA0A8650386"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A88C029C"))
+		(object State_Transition
+		    quid       	"5AA0A8A501B0"
+		    supplier   	"$UNNAMED$2"
+		    supplier_quidu 	"5AA0A8650386"
+		    client     	"Logical View::State/Activity Model::System Player"
+		    client_quidu 	"5AA0A6E800F1"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A8A501B3"))
+		(object State_Transition
+		    quid       	"5AA0A8B000D7"
+		    supplier   	"Logical View::State/Activity Model::FFmpeg Run"
+		    supplier_quidu 	"5AA0A630014E"
+		    client     	"$UNNAMED$2"
+		    client_quidu 	"5AA0A8650386"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A8B000DA"))
+		(object State_Transition
+		    quid       	"5AA0A9650047"
+		    supplier   	"Logical View::State/Activity Model::end"
+		    supplier_quidu 	"5A659A6002B9"
+		    client     	"$UNNAMED$3"
+		    client_quidu 	"5AA0A9520246"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A965004A"))
+		(object State_Transition
+		    quid       	"5AA0A97B00E0"
+		    supplier   	"Logical View::State/Activity Model::Output_RingBuffer"
+		    supplier_quidu 	"5AA0A6C4029C"
+		    client     	"$UNNAMED$3"
+		    client_quidu 	"5AA0A9520246"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A97B00E3"))
+		(object State_Transition
+		    quid       	"5AA0A97E0158"
+		    supplier   	"$UNNAMED$3"
+		    supplier_quidu 	"5AA0A9520246"
+		    client     	"Logical View::State/Activity Model::FFmpeg Run"
+		    client_quidu 	"5AA0A630014E"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0A97E015B")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
 		(object ActivityDiagram "DolbyVision"
@@ -515,7 +663,371 @@
 				(1828, 81)
 				(1824, 196))
 			    line_style 	0
-			    x_offset   	FALSE)))))
+			    x_offset   	FALSE)))
+		(object ActivityDiagram "RingBuffer"
+		    quid       	"5AA0A6180054"
+		    title      	"RingBuffer"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object Swimlane "" @19
+			    line_color 	3342489
+			    width      	450)
+			(object StateView "Normal" "Ts_RingBuffer" @20
+			    Parent_View 	@19
+			    location   	(1178, 359)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@20
+				location   	(1178, 350)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	328
+				justify    	0
+				label      	"Ts_RingBuffer")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A6260020"
+			    width      	425
+			    height     	131
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Audio_RingBuffer" @21
+			    Parent_View 	@19
+			    location   	(1861, 359)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@21
+				location   	(1861, 343)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	334
+				justify    	0
+				label      	"Audio_RingBuffer")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A6290167"
+			    width      	431
+			    height     	144
+			    autoResize 	TRUE)
+			(object StateView "Normal" "FFmpeg Run" @22
+			    Parent_View 	@19
+			    location   	(1519, 707)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@22
+				location   	(1519, 696)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"FFmpeg Run")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A630014E"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @23
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A70102A6"
+			    client     	@20
+			    supplier   	@22
+			    vertices   	(list Points
+				(1241, 424)
+				(1453, 640))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @24
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A70603DE"
+			    client     	@21
+			    supplier   	@22
+			    vertices   	(list Points
+				(1790, 431)
+				(1584, 639))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Output_RingBuffer" @25
+			    Parent_View 	@19
+			    location   	(1528, 1111)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@25
+				location   	(1528, 1102)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	460
+				justify    	0
+				label      	"Output_RingBuffer")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A6C4029C"
+			    width      	556
+			    height     	131
+			    autoResize 	TRUE)
+			(object StateView "Normal" "System Player" @26
+			    Parent_View 	@19
+			    location   	(1532, 1442)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@26
+				location   	(1532, 1431)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"System Player")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A6E800F1"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @27
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A7100346"
+			    client     	@25
+			    supplier   	@26
+			    vertices   	(list Points
+				(1528, 1176)
+				(1531, 1374))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "$UNNAMED$2" @28
+			    Parent_View 	@19
+			    location   	(1518, 1700)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A8650386"
+			    width      	294
+			    height     	119
+			    autoResize 	TRUE)
+			(object TransView "" @29
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A8A501B0"
+			    client     	@26
+			    supplier   	@28
+			    vertices   	(list Points
+				(1527, 1508)
+				(1518, 1641))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @30
+			    stereotype 	TRUE
+			    line_color 	255
+			    quidu      	"5AA0A8B000D7"
+			    client     	@28
+			    supplier   	@22
+			    vertices   	(list Points
+				(1665, 1700)
+				(2431, 1710)
+				(2431, 703)
+				(1669, 706))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "end" @31
+			    Parent_View 	@19
+			    location   	(1518, 2011)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@31
+				location   	(1518, 2000)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"end")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5A659A6002B9"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @32
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A88C0299"
+			    client     	@28
+			    supplier   	@31
+			    vertices   	(list Points
+				(1518, 1759)
+				(1518, 1944))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Label @33
+			    Parent_View 	@19
+			    location   	(1571, 1813)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    nlines     	1
+			    max_width  	475
+			    justify    	1
+			    label      	"consume all data")
+			(object Label @34
+			    Parent_View 	@19
+			    location   	(1731, 1600)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    nlines     	1
+			    max_width  	525
+			    justify    	1
+			    label      	"consume partly data")
+			(object DecisionView "$UNNAMED$3" @35
+			    Parent_View 	@19
+			    location   	(1519, 913)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0A9520246"
+			    width      	262
+			    height     	100
+			    autoResize 	TRUE)
+			(object TransView "" @36
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A9650047"
+			    client     	@35
+			    supplier   	@31
+			    vertices   	(list Points
+				(1388, 913)
+				(847, 903)
+				(838, 2000)
+				(1368, 2008))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @37
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A97B00E0"
+			    client     	@35
+			    supplier   	@25
+			    vertices   	(list Points
+				(1519, 963)
+				(1524, 1045))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @38
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0A97E0158"
+			    client     	@22
+			    supplier   	@35
+			    vertices   	(list Points
+				(1519, 774)
+				(1519, 863))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Label @39
+			    Parent_View 	@19
+			    location   	(1163, 835)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    nlines     	1
+			    max_width  	188
+			    justify    	1
+			    label      	"stop")
+			(object Label @40
+			    Parent_View 	@19
+			    location   	(1803, 610)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    nlines     	1
+			    max_width  	319
+			    justify    	1
+			    label      	"notify  stop")))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"5A6598720181"
@@ -526,7 +1038,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::NewClass" @19
+		    (object ClassView "Class" "Logical View::NewClass" @41
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -541,7 +1053,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@19
+			    Parent_View 	@41
 			    location   	(311, 183)
 			    fill_color 	13434879
 			    nlines     	1

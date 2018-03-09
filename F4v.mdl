@@ -229,6 +229,243 @@
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
+	    (object Class "IUniplayerDataAdCache__"
+		quid       	"5AA0DB5E002E"
+		realized_interfaces 	(list realize_rel_list
+		    (object Realize_Relationship
+			quid       	"5AA0E18201A7"
+			supplier   	"Logical View::AdDownloader"
+			quidu      	"5A9E62C0029F"))
+		operations 	(list Operations
+		    (object Operation "addAdCacheStrategy"
+			quid       	"5AA0DBCC004B"
+			parameters 	(list Parameters
+			    (object Parameter "int type"
+				quid       	"5AA0DBCE036F")
+			    (object Parameter "void*"
+				quid       	"5AA0DBCE039A"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "hasCache"
+			quid       	"5AA0DBD60125"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0DBD902A1"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0DBD902C7"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0DBD902D9"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "addCache"
+			quid       	"5AA0DBE1022D"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0DBE403C0"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0DBE403E4"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0DBE50013"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "setCurrentBusyLevel"
+			quid       	"5AA0DBEE03A4"
+			parameters 	(list Parameters
+			    (object Parameter "int level"
+				quid       	"5AA0DBF10062"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "getCache"
+			quid       	"5AA0E0D302F7"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E0D50236"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E0D50274"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E0D50299"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "UniplayerDataAdCache"
+		quid       	"5AA0DFFE03A7"
+		realized_interfaces 	(list realize_rel_list
+		    (object Realize_Relationship
+			quid       	"5AA0E0410089"
+			supplier   	"Logical View::IUniplayerDataAdCache__"
+			quidu      	"5AA0DB5E002E")
+		    (object Realize_Relationship
+			quid       	"5AA0E16B028E"
+			supplier   	"Logical View::IUniplayerDataAdCache"
+			quidu      	"5AA0E0E40194"))
+		operations 	(list Operations
+		    (object Operation "addAdCacheStrategy"
+			quid       	"5AA0E0540088"
+			parameters 	(list Parameters
+			    (object Parameter "int type"
+				quid       	"5AA0E05700ED")
+			    (object Parameter "void*"
+				quid       	"5AA0E057010B"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "hasCache"
+			quid       	"5AA0E05C02B9"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E05E019B"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E05E01DC"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E05E01DD"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "addCache"
+			quid       	"5AA0E06501C0"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E0690270"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E0690292"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E06902AB"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "setCurrentBusyLevel"
+			quid       	"5AA0E06F0088"
+			parameters 	(list Parameters
+			    (object Parameter "int level"
+				quid       	"5AA0E0710325"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "getCache"
+			quid       	"5AA0E0780058"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E07901BA"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E07901E4"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E07901F8"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "NewInterface2"
+		quid       	"5AA0E08A00FD"
+		stereotype 	"Interface"
+		operations 	(list Operations
+		    (object Operation "getCache"
+			quid       	"5AA0E08E0331"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E093024B"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E0930267"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E0930273"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "opname2"
+			quid       	"5AA0E0930229"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "IUniplayerDataAdCache"
+		quid       	"5AA0E0E40194"
+		stereotype 	"Interface"
+		operations 	(list Operations
+		    (object Operation "addAdCacheStrategy"
+			quid       	"5AA0E0F800F1"
+			parameters 	(list Parameters
+			    (object Parameter "int type"
+				quid       	"5AA0E0FB0240")
+			    (object Parameter "void*"
+				quid       	"5AA0E0FB0252"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "hasCache"
+			quid       	"5AA0E0FB021D"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E1270181"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E127019E"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E12701A7"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "addCache"
+			quid       	"5AA0E10C017B"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E13103AA"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E13103BD"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E13103CE"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "setCurrentBusyLevel"
+			quid       	"5AA0E13A0031"
+			parameters 	(list Parameters
+			    (object Parameter "int level"
+				quid       	"5AA0E13D0154"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "getCache"
+			quid       	"5AA0E143007D"
+			parameters 	(list Parameters
+			    (object Parameter "const std"
+				quid       	"5AA0E1440242"
+				type       	":string &url")
+			    (object Parameter "std"
+				quid       	"5AA0E144024A"
+				type       	":string &fileType")
+			    (object Parameter "int adType"
+				quid       	"5AA0E1440252"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "AdLocalCacheFileManager"
+		quid       	"5AA0E25D0376")
+	    (object Class "F4vToHlsComponent"
+		quid       	"5AA0E5F50201")
+	    (object Class "RawF4vComponent"
+		quid       	"5AA0E6080380")
+	    (object Class "LocalTsComponent"
+		quid       	"5AA0E62F01CF")
+	    (object Class "CacheToLocalFile"
+		quid       	"5AA0E64700FE")
 	    (object Association "$UNNAMED$0"
 		quid       	"5A9E6531000C"
 		roles      	(list role_list
@@ -300,6 +537,106 @@
 			quidu      	"5A9E607601C7"
 			is_navigable 	TRUE
 			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$15"
+		quid       	"5AA0E2A50147"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5AA0E2A503CA"
+			supplier   	"Logical View::UniplayerDataAdCache"
+			quidu      	"5AA0DFFE03A7"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5AA0E2A503CF"
+			supplier   	"Logical View::AdLocalCacheFileManager"
+			quidu      	"5AA0E25D0376"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$18"
+		quid       	"5AA0E2AE0394"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"5AA0E2AF02A0"
+			supplier   	"Logical View::AdLocalCacheFileManager"
+			quidu      	"5AA0E25D0376"
+			Containment 	"By Value"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"5AA0E2AF02A6"
+			supplier   	"Logical View::UniplayerDataAdCache"
+			quidu      	"5AA0DFFE03A7"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$21"
+		quid       	"5AA0E2E402DF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5AA0E2E5004A"
+			supplier   	"Logical View::AdDownloader"
+			quidu      	"5A9E62C0029F"
+			Containment 	"By Value"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5AA0E2E50059"
+			supplier   	"Logical View::UniplayerDataAdCache"
+			quidu      	"5AA0DFFE03A7"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$24"
+		quid       	"5AA0E662030A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"5AA0E6630179"
+			supplier   	"Logical View::LocalTsComponent"
+			quidu      	"5AA0E62F01CF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"5AA0E6630180"
+			supplier   	"Logical View::CacheToLocalFile"
+			quidu      	"5AA0E64700FE"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$27"
+		quid       	"5AA0E66B02AF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"5AA0E66C0160"
+			supplier   	"Logical View::CacheToLocalFile"
+			quidu      	"5AA0E64700FE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"5AA0E66C0166"
+			supplier   	"Logical View::LocalTsComponent"
+			quidu      	"5AA0E62F01CF"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$30"
+		quid       	"5AA0E6760076"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"5AA0E6760360"
+			supplier   	"Logical View::CacheToLocalFile"
+			quidu      	"5AA0E64700FE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"5AA0E6760367"
+			supplier   	"Logical View::RawF4vComponent"
+			quidu      	"5AA0E6080380"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$33"
+		quid       	"5AA0E6860348"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"5AA0E68702A7"
+			supplier   	"Logical View::CacheToLocalFile"
+			quidu      	"5AA0E64700FE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"5AA0E68702AF"
+			supplier   	"Logical View::F4vToHlsComponent"
+			quidu      	"5AA0E5F50201"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
 	    (object Class_Category "javax"
 		is_unit    	TRUE
 		is_loaded  	FALSE
@@ -330,7 +667,7 @@
 		(object State "pts dts convert"
 		    quid       	"5A4E1CCA0055"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$15"
+		(object Decision "$UNNAMED$36"
 		    quid       	"5A4E1CEF012D")
 		(object State "Audio Packet"
 		    quid       	"5A4E1D070190"
@@ -354,17 +691,17 @@
 		    type       	"Normal")
 		(object Decision "play hls"
 		    quid       	"5A977F47010A")
-		(object Decision "$UNNAMED$16"
+		(object Decision "$UNNAMED$37"
 		    quid       	"5A977FAB01FD")
 		(object State "cache f4v"
 		    quid       	"5A978128035A"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$17"
+		(object Decision "$UNNAMED$38"
 		    quid       	"5A978F2E032F")
 		(object State "download f4v"
 		    quid       	"5A9791290157"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$18"
+		(object Decision "$UNNAMED$39"
 		    quid       	"5A97934D02A2")
 		(object State "cache ts cache f4v"
 		    quid       	"5A9799CC00FE"
@@ -372,16 +709,16 @@
 		(object State "f4v to hls"
 		    quid       	"5A979BD60209"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$19"
+		(object Decision "$UNNAMED$40"
 		    quid       	"5A979D0A0138")
-		(object Decision "$UNNAMED$20"
+		(object Decision "$UNNAMED$41"
 		    quid       	"5A979E600108")
 		(object State "return"
 		    quid       	"5A979E850325"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$21"
+		(object Decision "$UNNAMED$42"
 		    quid       	"5A979F71000C")
-		(object Decision "$UNNAMED$22"
+		(object Decision "$UNNAMED$43"
 		    quid       	"5A97A6EA02C4")
 		(object State "hls"
 		    quid       	"5A97A6FE0036"
@@ -395,19 +732,36 @@
 		(object State "f4vcomponent"
 		    quid       	"5A97A7FA01F5"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$23"
+		(object Decision "$UNNAMED$44"
 		    quid       	"5A97A82B0066")
 		(object State "raw local ts"
 		    quid       	"5A97A84F013C"
 		    type       	"Normal")
-		(object Decision "$UNNAMED$24"
+		(object Decision "$UNNAMED$45"
 		    quid       	"5A97A8E5038E")
-		(object Decision "$UNNAMED$25"
+		(object Decision "$UNNAMED$46"
 		    quid       	"5A97AA0D02FA")
-		(object Decision "$UNNAMED$26"
+		(object Decision "$UNNAMED$47"
 		    quid       	"5A97AA7D0188")
 		(object State "return server url"
 		    quid       	"5A97AA920124"
+		    type       	"Normal")
+		(object State "uniplayerdata add cache"
+		    quid       	"5AA0EFF8000C"
+		    type       	"Normal")
+		(object State "sdk add cache"
+		    quid       	"5AA0F01003A1"
+		    type       	"Normal")
+		(object State "AdDownloader"
+		    quid       	"5AA0F09A025F"
+		    type       	"Normal")
+		(object Decision "$UNNAMED$48"
+		    quid       	"5AA0F0A90025")
+		(object State "cache request"
+		    quid       	"5AA0F12602D8"
+		    type       	"Normal")
+		(object State "wait for uniplayerdata loaded"
+		    quid       	"5AA0F16601C4"
 		    type       	"Normal"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
@@ -422,7 +776,7 @@
 			quid       	"5A4E1D4902C6"))
 		(object State_Transition
 		    quid       	"5A4E1D5302F3"
-		    supplier   	"$UNNAMED$15"
+		    supplier   	"$UNNAMED$36"
 		    supplier_quidu 	"5A4E1CEF012D"
 		    client     	"Logical View::State/Activity Model::Demux"
 		    client_quidu 	"5A4E1C2F011E"
@@ -432,7 +786,7 @@
 		    quid       	"5A4E1D65004A"
 		    supplier   	"Logical View::State/Activity Model::Video Packet"
 		    supplier_quidu 	"5A4E1C9600F0"
-		    client     	"$UNNAMED$15"
+		    client     	"$UNNAMED$36"
 		    client_quidu 	"5A4E1CEF012D"
 		    sendEvent  	(object sendEvent
 			quid       	"5A4E1D65004D"))
@@ -440,7 +794,7 @@
 		    quid       	"5A4E1D6802A2"
 		    supplier   	"Logical View::State/Activity Model::Audio Packet"
 		    supplier_quidu 	"5A4E1D070190"
-		    client     	"$UNNAMED$15"
+		    client     	"$UNNAMED$36"
 		    client_quidu 	"5A4E1CEF012D"
 		    sendEvent  	(object sendEvent
 			quid       	"5A4E1D6802A5"))
@@ -486,7 +840,7 @@
 			quid       	"5A977FC3010C"))
 		(object State_Transition
 		    quid       	"5A977FC601E2"
-		    supplier   	"$UNNAMED$16"
+		    supplier   	"$UNNAMED$37"
 		    supplier_quidu 	"5A977FAB01FD"
 		    client     	"Logical View::State/Activity Model::has ts cache"
 		    client_quidu 	"5A977EE30358"
@@ -496,7 +850,7 @@
 		    quid       	"5A977FC901DA"
 		    supplier   	"Logical View::State/Activity Model::return local f4v url"
 		    supplier_quidu 	"5A977F0D0291"
-		    client     	"$UNNAMED$16"
+		    client     	"$UNNAMED$37"
 		    client_quidu 	"5A977FAB01FD"
 		    sendEvent  	(object sendEvent
 			quid       	"5A977FC901DD"))
@@ -504,7 +858,7 @@
 		    quid       	"5A977FD40299"
 		    supplier   	"Logical View::State/Activity Model::return m3u8"
 		    supplier_quidu 	"5A977F1300F3"
-		    client     	"$UNNAMED$16"
+		    client     	"$UNNAMED$37"
 		    client_quidu 	"5A977FAB01FD"
 		    sendEvent  	(object sendEvent
 			quid       	"5A977FD4029C"))
@@ -534,7 +888,7 @@
 			quid       	"5A978E4F0082"))
 		(object State_Transition
 		    quid       	"5A978F980305"
-		    supplier   	"$UNNAMED$17"
+		    supplier   	"$UNNAMED$38"
 		    supplier_quidu 	"5A978F2E032F"
 		    client     	"Logical View::State/Activity Model::return m3u8"
 		    client_quidu 	"5A977F1300F3"
@@ -542,7 +896,7 @@
 			quid       	"5A978F980308"))
 		(object State_Transition
 		    quid       	"5A978F9F00BD"
-		    supplier   	"$UNNAMED$17"
+		    supplier   	"$UNNAMED$38"
 		    supplier_quidu 	"5A978F2E032F"
 		    client     	"Logical View::State/Activity Model::return local f4v url"
 		    client_quidu 	"5A977F0D0291"
@@ -552,7 +906,7 @@
 		    quid       	"5A978FA6014D"
 		    supplier   	"Logical View::State/Activity Model::cache f4v"
 		    supplier_quidu 	"5A978128035A"
-		    client     	"$UNNAMED$17"
+		    client     	"$UNNAMED$38"
 		    client_quidu 	"5A978F2E032F"
 		    sendEvent  	(object sendEvent
 			quid       	"5A978FA60150"))
@@ -560,7 +914,7 @@
 		    quid       	"5A978FAE0254"
 		    supplier   	"Logical View::State/Activity Model::return local f4v url"
 		    supplier_quidu 	"5A977F0D0291"
-		    client     	"$UNNAMED$17"
+		    client     	"$UNNAMED$38"
 		    client_quidu 	"5A978F2E032F"
 		    sendEvent  	(object sendEvent
 			quid       	"5A978FAE0257"))
@@ -574,7 +928,7 @@
 			quid       	"5A9791590036"))
 		(object State_Transition
 		    quid       	"5A97917B0005"
-		    supplier   	"$UNNAMED$17"
+		    supplier   	"$UNNAMED$38"
 		    supplier_quidu 	"5A978F2E032F"
 		    client     	"Logical View::State/Activity Model::download f4v"
 		    client_quidu 	"5A9791290157"
@@ -584,7 +938,7 @@
 		    quid       	"5A9791E001A9"
 		    supplier   	"Logical View::State/Activity Model::download f4v"
 		    supplier_quidu 	"5A9791290157"
-		    client     	"$UNNAMED$17"
+		    client     	"$UNNAMED$38"
 		    client_quidu 	"5A978F2E032F"
 		    sendEvent  	(object sendEvent
 			quid       	"5A9791E001AC"))
@@ -598,7 +952,7 @@
 			quid       	"5A9791E4006B"))
 		(object State_Transition
 		    quid       	"5A9793550049"
-		    supplier   	"$UNNAMED$18"
+		    supplier   	"$UNNAMED$39"
 		    supplier_quidu 	"5A97934D02A2"
 		    client     	"Logical View::State/Activity Model::download f4v"
 		    client_quidu 	"5A9791290157"
@@ -608,7 +962,7 @@
 		    quid       	"5A979365009A"
 		    supplier   	"Logical View::State/Activity Model::cache f4v"
 		    supplier_quidu 	"5A978128035A"
-		    client     	"$UNNAMED$18"
+		    client     	"$UNNAMED$39"
 		    client_quidu 	"5A97934D02A2"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979365009D"))
@@ -616,7 +970,7 @@
 		    quid       	"5A97945B02E4"
 		    supplier   	"Logical View::State/Activity Model::cache f4v"
 		    supplier_quidu 	"5A978128035A"
-		    client     	"$UNNAMED$18"
+		    client     	"$UNNAMED$39"
 		    client_quidu 	"5A97934D02A2"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97945B02E7"))
@@ -638,7 +992,7 @@
 			quid       	"5A979BF60343"))
 		(object State_Transition
 		    quid       	"5A979BF902B8"
-		    supplier   	"$UNNAMED$18"
+		    supplier   	"$UNNAMED$39"
 		    supplier_quidu 	"5A97934D02A2"
 		    client     	"Logical View::State/Activity Model::f4v to hls"
 		    client_quidu 	"5A979BD60209"
@@ -648,7 +1002,7 @@
 		    quid       	"5A979C040300"
 		    supplier   	"Logical View::State/Activity Model::return"
 		    supplier_quidu 	"5A979E850325"
-		    client     	"$UNNAMED$18"
+		    client     	"$UNNAMED$39"
 		    client_quidu 	"5A97934D02A2"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979C040303"))
@@ -662,9 +1016,9 @@
 			quid       	"5A979C5C017F"))
 		(object State_Transition
 		    quid       	"5A979D1200FC"
-		    supplier   	"$UNNAMED$19"
+		    supplier   	"$UNNAMED$40"
 		    supplier_quidu 	"5A979D0A0138"
-		    client     	"$UNNAMED$16"
+		    client     	"$UNNAMED$37"
 		    client_quidu 	"5A977FAB01FD"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979D1200FF"))
@@ -672,7 +1026,7 @@
 		    quid       	"5A979D27036D"
 		    supplier   	"Logical View::State/Activity Model::return m3u8"
 		    supplier_quidu 	"5A977F1300F3"
-		    client     	"$UNNAMED$19"
+		    client     	"$UNNAMED$40"
 		    client_quidu 	"5A979D0A0138"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979D270370"))
@@ -680,21 +1034,21 @@
 		    quid       	"5A979D51023F"
 		    supplier   	"Logical View::State/Activity Model::return m3u8"
 		    supplier_quidu 	"5A977F1300F3"
-		    client     	"$UNNAMED$19"
+		    client     	"$UNNAMED$40"
 		    client_quidu 	"5A979D0A0138"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979D510242"))
 		(object State_Transition
 		    quid       	"5A979DA101DB"
-		    supplier   	"$UNNAMED$17"
+		    supplier   	"$UNNAMED$38"
 		    supplier_quidu 	"5A978F2E032F"
-		    client     	"$UNNAMED$16"
+		    client     	"$UNNAMED$37"
 		    client_quidu 	"5A977FAB01FD"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979DA101DE"))
 		(object State_Transition
 		    quid       	"5A979DBC038B"
-		    supplier   	"$UNNAMED$16"
+		    supplier   	"$UNNAMED$37"
 		    supplier_quidu 	"5A977FAB01FD"
 		    client     	"Logical View::State/Activity Model::Ad Input"
 		    client_quidu 	"5A977ED401DC"
@@ -702,7 +1056,7 @@
 			quid       	"5A979DBC038E"))
 		(object State_Transition
 		    quid       	"5A979E650333"
-		    supplier   	"$UNNAMED$20"
+		    supplier   	"$UNNAMED$41"
 		    supplier_quidu 	"5A979E600108"
 		    client     	"Logical View::State/Activity Model::download f4v"
 		    client_quidu 	"5A9791290157"
@@ -712,7 +1066,7 @@
 		    quid       	"5A979E690234"
 		    supplier   	"Logical View::State/Activity Model::cache f4v"
 		    supplier_quidu 	"5A978128035A"
-		    client     	"$UNNAMED$20"
+		    client     	"$UNNAMED$41"
 		    client_quidu 	"5A979E600108"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979E690237"))
@@ -720,7 +1074,7 @@
 		    quid       	"5A979E8902BC"
 		    supplier   	"Logical View::State/Activity Model::return"
 		    supplier_quidu 	"5A979E850325"
-		    client     	"$UNNAMED$20"
+		    client     	"$UNNAMED$41"
 		    client_quidu 	"5A979E600108"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979E8902BF"))
@@ -728,13 +1082,13 @@
 		    quid       	"5A979F870216"
 		    supplier   	"Logical View::State/Activity Model::download f4v"
 		    supplier_quidu 	"5A9791290157"
-		    client     	"$UNNAMED$21"
+		    client     	"$UNNAMED$42"
 		    client_quidu 	"5A979F71000C"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979F870219"))
 		(object State_Transition
 		    quid       	"5A979F8A0378"
-		    supplier   	"$UNNAMED$21"
+		    supplier   	"$UNNAMED$42"
 		    supplier_quidu 	"5A979F71000C"
 		    client     	"Logical View::State/Activity Model::return m3u8"
 		    client_quidu 	"5A977F1300F3"
@@ -744,15 +1098,15 @@
 		    quid       	"5A979FE000C4"
 		    supplier   	"Logical View::State/Activity Model::f4v to hls"
 		    supplier_quidu 	"5A979BD60209"
-		    client     	"$UNNAMED$21"
+		    client     	"$UNNAMED$42"
 		    client_quidu 	"5A979F71000C"
 		    sendEvent  	(object sendEvent
 			quid       	"5A979FE000C7"))
 		(object State_Transition
 		    quid       	"5A97A2D203C5"
-		    supplier   	"$UNNAMED$20"
+		    supplier   	"$UNNAMED$41"
 		    supplier_quidu 	"5A979E600108"
-		    client     	"$UNNAMED$17"
+		    client     	"$UNNAMED$38"
 		    client_quidu 	"5A978F2E032F"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A2D203C8"))
@@ -760,7 +1114,7 @@
 		    quid       	"5A97A2F60276"
 		    supplier   	"Logical View::State/Activity Model::download f4v"
 		    supplier_quidu 	"5A9791290157"
-		    client     	"$UNNAMED$20"
+		    client     	"$UNNAMED$41"
 		    client_quidu 	"5A979E600108"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A2F60279"))
@@ -776,13 +1130,13 @@
 		    quid       	"5A97A7090215"
 		    supplier   	"Logical View::State/Activity Model::hls"
 		    supplier_quidu 	"5A97A6FE0036"
-		    client     	"$UNNAMED$22"
+		    client     	"$UNNAMED$43"
 		    client_quidu 	"5A97A6EA02C4"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A7090218"))
 		(object State_Transition
 		    quid       	"5A97A7450032"
-		    supplier   	"$UNNAMED$22"
+		    supplier   	"$UNNAMED$43"
 		    supplier_quidu 	"5A97A6EA02C4"
 		    client     	"Logical View::State/Activity Model::Ad Input"
 		    client_quidu 	"5A977ED401DC"
@@ -792,13 +1146,13 @@
 		    quid       	"5A97A83A0093"
 		    supplier   	"Logical View::State/Activity Model::f4vcomponent"
 		    supplier_quidu 	"5A97A7FA01F5"
-		    client     	"$UNNAMED$23"
+		    client     	"$UNNAMED$44"
 		    client_quidu 	"5A97A82B0066"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A83A0096"))
 		(object State_Transition
 		    quid       	"5A97A855008A"
-		    supplier   	"$UNNAMED$23"
+		    supplier   	"$UNNAMED$44"
 		    supplier_quidu 	"5A97A82B0066"
 		    client     	"Logical View::State/Activity Model::hls"
 		    client_quidu 	"5A97A6FE0036"
@@ -808,7 +1162,7 @@
 		    quid       	"5A97A86600BA"
 		    supplier   	"Logical View::State/Activity Model::raw local ts"
 		    supplier_quidu 	"5A97A84F013C"
-		    client     	"$UNNAMED$23"
+		    client     	"$UNNAMED$44"
 		    client_quidu 	"5A97A82B0066"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A86600BD"))
@@ -816,7 +1170,7 @@
 		    quid       	"5A97A9200224"
 		    supplier   	"Logical View::State/Activity Model::cache ts cache f4v"
 		    supplier_quidu 	"5A9799CC00FE"
-		    client     	"$UNNAMED$24"
+		    client     	"$UNNAMED$45"
 		    client_quidu 	"5A97A8E5038E"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A9200227"))
@@ -824,13 +1178,13 @@
 		    quid       	"5A97A9240104"
 		    supplier   	"Logical View::State/Activity Model::return"
 		    supplier_quidu 	"5A979E850325"
-		    client     	"$UNNAMED$24"
+		    client     	"$UNNAMED$45"
 		    client_quidu 	"5A97A8E5038E"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97A9240107"))
 		(object State_Transition
 		    quid       	"5A97A92B028D"
-		    supplier   	"$UNNAMED$24"
+		    supplier   	"$UNNAMED$45"
 		    supplier_quidu 	"5A97A8E5038E"
 		    client     	"Logical View::State/Activity Model::f4vcomponent"
 		    client_quidu 	"5A97A7FA01F5"
@@ -838,9 +1192,9 @@
 			quid       	"5A97A92B0290"))
 		(object State_Transition
 		    quid       	"5A97AA1700E8"
-		    supplier   	"$UNNAMED$25"
+		    supplier   	"$UNNAMED$46"
 		    supplier_quidu 	"5A97AA0D02FA"
-		    client     	"$UNNAMED$22"
+		    client     	"$UNNAMED$43"
 		    client_quidu 	"5A97A6EA02C4"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97AA1700EB"))
@@ -848,7 +1202,7 @@
 		    quid       	"5A97AA250090"
 		    supplier   	"Logical View::State/Activity Model::return local f4v"
 		    supplier_quidu 	"5A97A7EB0059"
-		    client     	"$UNNAMED$25"
+		    client     	"$UNNAMED$46"
 		    client_quidu 	"5A97AA0D02FA"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97AA250093"))
@@ -856,13 +1210,13 @@
 		    quid       	"5A97AA29026F"
 		    supplier   	"Logical View::State/Activity Model::rawf4v"
 		    supplier_quidu 	"5A97A78B00F3"
-		    client     	"$UNNAMED$25"
+		    client     	"$UNNAMED$46"
 		    client_quidu 	"5A97AA0D02FA"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97AA290272"))
 		(object State_Transition
 		    quid       	"5A97AA8D0156"
-		    supplier   	"$UNNAMED$26"
+		    supplier   	"$UNNAMED$47"
 		    supplier_quidu 	"5A97AA7D0188"
 		    client     	"Logical View::State/Activity Model::rawf4v"
 		    client_quidu 	"5A97A78B00F3"
@@ -872,7 +1226,7 @@
 		    quid       	"5A97AA9701DE"
 		    supplier   	"Logical View::State/Activity Model::cache f4v"
 		    supplier_quidu 	"5A978128035A"
-		    client     	"$UNNAMED$26"
+		    client     	"$UNNAMED$47"
 		    client_quidu 	"5A97AA7D0188"
 		    sendEvent  	(object sendEvent
 			quid       	"5A97AA9701E1"))
@@ -880,10 +1234,66 @@
 		    quid       	"5A97AA9A002E"
 		    supplier   	"Logical View::State/Activity Model::return server url"
 		    supplier_quidu 	"5A97AA920124"
-		    client     	"$UNNAMED$26"
+		    client     	"$UNNAMED$47"
 		    client_quidu 	"5A97AA7D0188"
 		    sendEvent  	(object sendEvent
-			quid       	"5A97AA9A0031")))
+			quid       	"5A97AA9A0031"))
+		(object State_Transition
+		    quid       	"5AA0F09701EC"
+		    supplier   	"Logical View::State/Activity Model::uniplayerdata add cache"
+		    supplier_quidu 	"5AA0EFF8000C"
+		    client     	"Logical View::State/Activity Model::sdk add cache"
+		    client_quidu 	"5AA0F01003A1"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F09701EF"))
+		(object State_Transition
+		    quid       	"5AA0F0FC0277"
+		    supplier   	"Logical View::State/Activity Model::uniplayerdata add cache"
+		    supplier_quidu 	"5AA0EFF8000C"
+		    client     	"$UNNAMED$48"
+		    client_quidu 	"5AA0F0A90025"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F0FC027A"))
+		(object State_Transition
+		    quid       	"5AA0F10A01D5"
+		    supplier   	"$UNNAMED$48"
+		    supplier_quidu 	"5AA0F0A90025"
+		    client     	"Logical View::State/Activity Model::sdk add cache"
+		    client_quidu 	"5AA0F01003A1"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F10A01D8"))
+		(object State_Transition
+		    quid       	"5AA0F11B034E"
+		    supplier   	"Logical View::State/Activity Model::AdDownloader"
+		    supplier_quidu 	"5AA0F09A025F"
+		    client     	"Logical View::State/Activity Model::uniplayerdata add cache"
+		    client_quidu 	"5AA0EFF8000C"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F11B0351"))
+		(object State_Transition
+		    quid       	"5AA0F12C031C"
+		    supplier   	"Logical View::State/Activity Model::cache request"
+		    supplier_quidu 	"5AA0F12602D8"
+		    client     	"$UNNAMED$48"
+		    client_quidu 	"5AA0F0A90025"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F12C031F"))
+		(object State_Transition
+		    quid       	"5AA0F19101B0"
+		    supplier   	"Logical View::State/Activity Model::wait for uniplayerdata loaded"
+		    supplier_quidu 	"5AA0F16601C4"
+		    client     	"Logical View::State/Activity Model::cache request"
+		    client_quidu 	"5AA0F12602D8"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F19101B3"))
+		(object State_Transition
+		    quid       	"5AA0F194024F"
+		    supplier   	"Logical View::State/Activity Model::uniplayerdata add cache"
+		    supplier_quidu 	"5AA0EFF8000C"
+		    client     	"Logical View::State/Activity Model::wait for uniplayerdata loaded"
+		    client_quidu 	"5AA0F16601C4"
+		    sendEvent  	(object sendEvent
+			quid       	"5AA0F1940252")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
 		(object ActivityDiagram "F4v"
@@ -1029,7 +1439,7 @@
 				(1478, 1088))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object DecisionView "$UNNAMED$15" @8
+			(object DecisionView "$UNNAMED$36" @8
 			    Parent_View 	@1
 			    location   	(1297, 770)
 			    icon_style 	"Icon"
@@ -1258,7 +1668,7 @@
 			    quidu      	"5A977ED401DC"
 			    height     	134
 			    autoResize 	TRUE)
-			(object DecisionView "$UNNAMED$16" @22
+			(object DecisionView "$UNNAMED$37" @22
 			    Parent_View 	@20
 			    location   	(1264, 666)
 			    icon_style 	"Icon"
@@ -1463,7 +1873,7 @@
 			    quidu      	"5A9791290157"
 			    height     	134
 			    autoResize 	TRUE)
-			(object DecisionView "$UNNAMED$17" @33
+			(object DecisionView "$UNNAMED$38" @33
 			    Parent_View 	@20
 			    location   	(1268, 1155)
 			    icon_style 	"Icon"
@@ -1484,7 +1894,7 @@
 				(1268, 1099))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object DecisionView "$UNNAMED$18" @35
+			(object DecisionView "$UNNAMED$39" @35
 			    Parent_View 	@20
 			    location   	(4224, 698)
 			    icon_style 	"Icon"
@@ -1713,7 +2123,7 @@
 				(4224, 1133))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object DecisionView "$UNNAMED$19" @48
+			(object DecisionView "$UNNAMED$40" @48
 			    Parent_View 	@20
 			    location   	(1840, 666)
 			    icon_style 	"Icon"
@@ -1815,7 +2225,7 @@
 			    max_width  	238
 			    justify    	1
 			    label      	"no hit")
-			(object DecisionView "$UNNAMED$20" @55
+			(object DecisionView "$UNNAMED$41" @55
 			    Parent_View 	@20
 			    location   	(1274, 1456)
 			    icon_style 	"Icon"
@@ -1918,7 +2328,7 @@
 			    max_width  	188
 			    justify    	1
 			    label      	"no cache")
-			(object DecisionView "$UNNAMED$21" @62
+			(object DecisionView "$UNNAMED$42" @62
 			    Parent_View 	@20
 			    location   	(2784, 666)
 			    icon_style 	"Icon"
@@ -2050,13 +2460,13 @@
 				(2742, 1488))
 			    line_style 	0
 			    x_offset   	FALSE)))
-		(object ActivityDiagram "AdCompoent2"
+		(object ActivityDiagram "AdCacheComponent"
 		    quid       	"5A97A69401A5"
-		    title      	"AdCompoent2"
+		    title      	"AdCacheComponent"
 		    zoom       	100
 		    max_height 	28350
 		    max_width  	21600
-		    origin_x   	582
+		    origin_x   	581
 		    origin_y   	0
 		    items      	(list diagram_item_list
 			(object Swimlane "" @71
@@ -2064,7 +2474,7 @@
 			    width      	450)
 			(object StateView "Normal" "Ad Input" @72
 			    Parent_View 	@71
-			    location   	(1072, 400)
+			    location   	(1952, 192)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2076,7 +2486,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@72
-				location   	(1072, 389)
+				location   	(1952, 181)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2089,9 +2499,9 @@
 			    quidu      	"5A977ED401DC"
 			    height     	134
 			    autoResize 	TRUE)
-			(object DecisionView "$UNNAMED$22" @73
+			(object DecisionView "$UNNAMED$43" @73
 			    Parent_View 	@71
-			    location   	(1067, 800)
+			    location   	(1952, 592)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
@@ -2106,13 +2516,13 @@
 			    client     	@72
 			    supplier   	@73
 			    vertices   	(list Points
-				(1070, 467)
-				(1067, 709))
+				(1952, 259)
+				(1952, 501))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "hls" @75
 			    Parent_View 	@71
-			    location   	(1586, 800)
+			    location   	(2464, 592)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2124,7 +2534,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@75
-				location   	(1586, 789)
+				location   	(2464, 581)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2144,13 +2554,13 @@
 			    client     	@73
 			    supplier   	@75
 			    vertices   	(list Points
-				(1242, 800)
-				(1436, 800))
+				(2127, 592)
+				(2314, 592))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "cache f4v" @77
 			    Parent_View 	@71
-			    location   	(2448, 1728)
+			    location   	(3328, 1520)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2162,7 +2572,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@77
-				location   	(2448, 1717)
+				location   	(3328, 1509)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2177,7 +2587,7 @@
 			    autoResize 	TRUE)
 			(object Label @78
 			    Parent_View 	@71
-			    location   	(1185, 703)
+			    location   	(2064, 496)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2193,7 +2603,7 @@
 			    label      	"f4vtohls¿ª")
 			(object StateView "Normal" "rawf4v" @79
 			    Parent_View 	@71
-			    location   	(1072, 1728)
+			    location   	(1952, 1520)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2205,7 +2615,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@79
-				location   	(1072, 1717)
+				location   	(1952, 1509)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2220,7 +2630,7 @@
 			    autoResize 	TRUE)
 			(object Label @80
 			    Parent_View 	@71
-			    location   	(1120, 880)
+			    location   	(2000, 672)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2236,7 +2646,7 @@
 			    label      	"f4vtohls¹Ø")
 			(object StateView "Normal" "return local f4v" @81
 			    Parent_View 	@71
-			    location   	(1616, 1328)
+			    location   	(2496, 1120)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2248,7 +2658,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@81
-				location   	(1616, 1317)
+				location   	(2496, 1109)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2263,7 +2673,7 @@
 			    autoResize 	TRUE)
 			(object StateView "Normal" "f4vcomponent" @82
 			    Parent_View 	@71
-			    location   	(2752, 800)
+			    location   	(3632, 592)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2275,7 +2685,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@82
-				location   	(2752, 785)
+				location   	(3632, 577)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2289,9 +2699,9 @@
 			    width      	450
 			    height     	143
 			    autoResize 	TRUE)
-			(object DecisionView "$UNNAMED$23" @83
+			(object DecisionView "$UNNAMED$44" @83
 			    Parent_View 	@71
-			    location   	(2162, 800)
+			    location   	(3040, 592)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
@@ -2306,8 +2716,8 @@
 			    client     	@83
 			    supplier   	@82
 			    vertices   	(list Points
-				(2349, 800)
-				(2527, 800))
+				(3227, 592)
+				(3407, 592))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object TransView "" @85
@@ -2317,13 +2727,13 @@
 			    client     	@75
 			    supplier   	@83
 			    vertices   	(list Points
-				(1736, 800)
-				(1975, 800))
+				(2614, 592)
+				(2853, 592))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "raw local ts" @86
 			    Parent_View 	@71
-			    location   	(2160, 1152)
+			    location   	(3040, 944)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2335,7 +2745,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@86
-				location   	(2160, 1141)
+				location   	(3040, 933)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2355,13 +2765,13 @@
 			    client     	@83
 			    supplier   	@86
 			    vertices   	(list Points
-				(2162, 871)
-				(2160, 1085))
+				(3040, 663)
+				(3040, 877))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object Label @88
 			    Parent_View 	@71
-			    location   	(2353, 703)
+			    location   	(3232, 496)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2377,7 +2787,7 @@
 			    label      	"Î´ÃüÖÐ")
 			(object Label @89
 			    Parent_View 	@71
-			    location   	(2181, 896)
+			    location   	(3056, 688)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2391,9 +2801,9 @@
 			    max_width  	206
 			    justify    	1
 			    label      	"ÃüÖÐ")
-			(object DecisionView "$UNNAMED$24" @90
+			(object DecisionView "$UNNAMED$45" @90
 			    Parent_View 	@71
-			    location   	(3283, 799)
+			    location   	(4160, 592)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
@@ -2408,13 +2818,13 @@
 			    client     	@82
 			    supplier   	@90
 			    vertices   	(list Points
-				(2977, 799)
-				(3137, 799))
+				(3857, 592)
+				(4014, 592))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "cache ts cache f4v" @92
 			    Parent_View 	@71
-			    location   	(3792, 800)
+			    location   	(4672, 592)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2426,7 +2836,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@92
-				location   	(3792, 789)
+				location   	(4672, 581)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2446,13 +2856,13 @@
 			    client     	@90
 			    supplier   	@92
 			    vertices   	(list Points
-				(3429, 799)
-				(3642, 799))
+				(4306, 592)
+				(4522, 592))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "return" @94
 			    Parent_View 	@71
-			    location   	(3280, 1136)
+			    location   	(4160, 928)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2464,7 +2874,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@94
-				location   	(3280, 1125)
+				location   	(4160, 917)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2484,13 +2894,13 @@
 			    client     	@90
 			    supplier   	@94
 			    vertices   	(list Points
-				(3283, 864)
-				(3280, 1068))
+				(4160, 657)
+				(4160, 861))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object Label @96
 			    Parent_View 	@71
-			    location   	(3375, 703)
+			    location   	(4256, 496)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2506,7 +2916,7 @@
 			    label      	"»º´æ")
 			(object Label @97
 			    Parent_View 	@71
-			    location   	(3312, 881)
+			    location   	(4192, 672)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2520,9 +2930,9 @@
 			    max_width  	331
 			    justify    	1
 			    label      	"²»»º´æ")
-			(object DecisionView "$UNNAMED$25" @98
+			(object DecisionView "$UNNAMED$46" @98
 			    Parent_View 	@71
-			    location   	(1072, 1328)
+			    location   	(1952, 1120)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
@@ -2537,8 +2947,8 @@
 			    client     	@73
 			    supplier   	@98
 			    vertices   	(list Points
-				(1067, 891)
-				(1072, 1241))
+				(1952, 683)
+				(1952, 1033))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object TransView "" @100
@@ -2548,8 +2958,8 @@
 			    client     	@98
 			    supplier   	@81
 			    vertices   	(list Points
-				(1269, 1328)
-				(1466, 1328))
+				(2149, 1120)
+				(2346, 1120))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object TransView "" @101
@@ -2559,13 +2969,13 @@
 			    client     	@98
 			    supplier   	@79
 			    vertices   	(list Points
-				(1072, 1415)
-				(1072, 1661))
+				(1952, 1207)
+				(1952, 1453))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object Label @102
 			    Parent_View 	@71
-			    location   	(1200, 1231)
+			    location   	(2080, 1024)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2581,7 +2991,7 @@
 			    label      	"hit")
 			(object Label @103
 			    Parent_View 	@71
-			    location   	(1103, 1472)
+			    location   	(1984, 1264)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2595,9 +3005,9 @@
 			    max_width  	219
 			    justify    	1
 			    label      	"no hit")
-			(object DecisionView "$UNNAMED$26" @104
+			(object DecisionView "$UNNAMED$47" @104
 			    Parent_View 	@71
-			    location   	(1680, 1728)
+			    location   	(2560, 1520)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
@@ -2612,8 +3022,8 @@
 			    client     	@79
 			    supplier   	@104
 			    vertices   	(list Points
-				(1222, 1728)
-				(1468, 1728))
+				(2102, 1520)
+				(2348, 1520))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object TransView "" @106
@@ -2623,13 +3033,13 @@
 			    client     	@104
 			    supplier   	@77
 			    vertices   	(list Points
-				(1892, 1728)
-				(2298, 1728))
+				(2772, 1520)
+				(3178, 1520))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object StateView "Normal" "return server url" @107
 			    Parent_View 	@71
-			    location   	(1680, 2080)
+			    location   	(2560, 1872)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2641,7 +3051,7 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@107
-				location   	(1680, 2065)
+				location   	(2560, 1857)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
@@ -2662,13 +3072,13 @@
 			    client     	@104
 			    supplier   	@107
 			    vertices   	(list Points
-				(1680, 1824)
-				(1680, 2009))
+				(2560, 1616)
+				(2560, 1801))
 			    line_style 	0
 			    x_offset   	FALSE)
 			(object Label @109
 			    Parent_View 	@71
-			    location   	(1840, 1616)
+			    location   	(2720, 1408)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2684,7 +3094,7 @@
 			    label      	"»º´æ")
 			(object Label @110
 			    Parent_View 	@71
-			    location   	(1744, 1856)
+			    location   	(2624, 1648)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2697,7 +3107,234 @@
 			    nlines     	1
 			    max_width  	300
 			    justify    	1
-			    label      	"²»»º´æ")))))
+			    label      	"²»»º´æ")
+			(object StateView "Normal" "uniplayerdata add cache" @111
+			    Parent_View 	@71
+			    location   	(384, 1072)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@111
+				location   	(384, 1061)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	250
+				justify    	0
+				label      	"uniplayerdata add cache")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0EFF8000C"
+			    width      	346
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "sdk add cache" @112
+			    Parent_View 	@71
+			    location   	(384, 544)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@112
+				location   	(384, 533)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"sdk add cache")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0F01003A1"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "AdDownloader" @113
+			    Parent_View 	@71
+			    location   	(368, 1328)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@113
+				location   	(368, 1317)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"AdDownloader")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0F09A025F"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @114
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F11B034E"
+			    client     	@111
+			    supplier   	@113
+			    vertices   	(list Points
+				(379, 1139)
+				(372, 1261))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "$UNNAMED$48" @115
+			    Parent_View 	@71
+			    location   	(384, 816)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0F0A90025"
+			    autoResize 	TRUE)
+			(object TransView "" @116
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F0FC0277"
+			    client     	@115
+			    supplier   	@111
+			    vertices   	(list Points
+				(384, 853)
+				(384, 1005))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @117
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F10A01D5"
+			    client     	@112
+			    supplier   	@115
+			    vertices   	(list Points
+				(384, 611)
+				(384, 779))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Label @118
+			    Parent_View 	@71
+			    location   	(400, 880)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    nlines     	1
+			    max_width  	387
+			    justify    	1
+			    label      	"uniplayerdata loaded")
+			(object StateView "Normal" "cache request" @119
+			    Parent_View 	@71
+			    location   	(1008, 816)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@119
+				location   	(1008, 805)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"cache request")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0F12602D8"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @120
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F12C031C"
+			    client     	@115
+			    supplier   	@119
+			    vertices   	(list Points
+				(459, 816)
+				(858, 816))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "wait for uniplayerdata loaded" @121
+			    Parent_View 	@71
+			    location   	(1008, 1072)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@121
+				location   	(1008, 1061)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	384
+				justify    	0
+				label      	"wait for uniplayerdata loaded")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5AA0F16601C4"
+			    width      	480
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @122
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F19101B0"
+			    client     	@119
+			    supplier   	@121
+			    vertices   	(list Points
+				(1008, 883)
+				(1008, 1005))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @123
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5AA0F194024F"
+			    client     	@121
+			    supplier   	@111
+			    vertices   	(list Points
+				(768, 1072)
+				(557, 1072))
+			    line_style 	0
+			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Package Hierarchy"
 		quid       	"39C9261001B8"
@@ -2708,7 +3345,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @111
+		    (object NoteView @124
 			location   	(928, 464)
 			font       	(object Font
 			    size       	10
@@ -2732,7 +3369,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @112
+		    (object NoteView @125
 			location   	(224, 624)
 			font       	(object Font
 			    size       	10
@@ -2747,7 +3384,7 @@
 			fill_color 	12632256
 			width      	300
 			height     	132)
-		    (object NoteView @113
+		    (object NoteView @126
 			location   	(704, 624)
 			font       	(object Font
 			    size       	10
@@ -2762,7 +3399,7 @@
 			fill_color 	8421631
 			width      	300
 			height     	132)
-		    (object NoteView @114
+		    (object NoteView @127
 			location   	(1200, 624)
 			font       	(object Font
 			    size       	10
@@ -2777,7 +3414,7 @@
 			fill_color 	12615680
 			width      	300
 			height     	132)
-		    (object NoteView @115
+		    (object NoteView @128
 			location   	(1664, 624)
 			font       	(object Font
 			    size       	10
@@ -2792,7 +3429,7 @@
 			fill_color 	16777215
 			width      	300
 			height     	132)
-		    (object Label @116
+		    (object Label @129
 			location   	(81, 369)
 			font       	(object Font
 			    size       	12
@@ -2807,7 +3444,7 @@
 			max_width  	1163
 			justify    	1
 			label      	"J2EE: Java 2 Platform, Enterprise Edition - v 1.2.1")
-		    (object Label @117
+		    (object Label @130
 			location   	(96, 608)
 			font       	(object Font
 			    size       	10
@@ -2822,7 +3459,7 @@
 			max_width  	268
 			justify    	1
 			label      	"Abstract Class")
-		    (object Label @118
+		    (object Label @131
 			location   	(592, 608)
 			font       	(object Font
 			    size       	10
@@ -2837,7 +3474,7 @@
 			max_width  	225
 			justify    	1
 			label      	"Final Class")
-		    (object Label @119
+		    (object Label @132
 			location   	(1104, 608)
 			font       	(object Font
 			    size       	10
@@ -2852,7 +3489,7 @@
 			max_width  	206
 			justify    	1
 			label      	"Interface")
-		    (object Label @120
+		    (object Label @133
 			location   	(1552, 608)
 			font       	(object Font
 			    size       	10
@@ -2867,20 +3504,20 @@
 			max_width  	144
 			justify    	1
 			label      	"Class")))
-	    (object ClassDiagram "OldInterface"
+	    (object ClassDiagram "Interface_Old"
 		quid       	"5A9E60600227"
-		title      	"OldInterface"
+		title      	"Interface_Old"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::AdDownloader" @121
+		    (object ClassView "Class" "Logical View::AdDownloader" @134
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1920, 352)
+			location   	(1200, 336)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2891,8 +3528,8 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@121
-			    location   	(1772, 221)
+			    Parent_View 	@134
+			    location   	(1052, 205)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	296
@@ -2903,8 +3540,8 @@
 			fill_color 	13434879
 			quidu      	"5A9E62C0029F"
 			compartment 	(object Compartment
-			    Parent_View 	@121
-			    location   	(1772, 282)
+			    Parent_View 	@134
+			    location   	(1052, 266)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -2918,17 +3555,17 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	4
-			    max_width  	234
+			    max_width  	228
 			    justify    	1)
 			width      	314
 			height     	286
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::AdCacheManager" @122
+		    (object ClassView "Class" "Logical View::LocalCacheFileManager" @135
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(864, 416)
+			location   	(864, 960)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2939,95 +3576,8 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@122
-			    location   	(631, 235)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	466
-			    justify    	0
-			    label      	"AdCacheManager")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5A9E607601C7"
-			compartment 	(object Compartment
-			    Parent_View 	@122
-			    location   	(631, 296)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	13434879
-			    anchor     	2
-			    nlines     	6
-			    max_width  	468
-			    justify    	1)
-			width      	484
-			height     	386
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$9" @123
-			location   	(1434, 381)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5A9E65C20316"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$10" @124
-				Parent_View 	@123
-				location   	(538, -35)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A9E65C300E8"
-				client     	@123
-				supplier   	@121
-				vertices   	(list Points
-				    (1434, 381)
-				    (1762, 361))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$11" @125
-				Parent_View 	@123
-				location   	(538, -35)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5A9E65C300EF"
-				client     	@123
-				supplier   	@122
-				vertices   	(list Points
-				    (1434, 381)
-				    (1106, 401))
-				line_style 	0)))
-		    (object ClassView "Class" "Logical View::LocalCacheFileManager" @126
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1584, 1120)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@126
-			    location   	(1349, 964)
+			    Parent_View 	@135
+			    location   	(629, 804)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	470
@@ -3038,8 +3588,8 @@
 			fill_color 	13434879
 			quidu      	"5A9E64440037"
 			compartment 	(object Compartment
-			    Parent_View 	@126
-			    location   	(1349, 1025)
+			    Parent_View 	@135
+			    location   	(629, 865)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -3059,8 +3609,95 @@
 			height     	336
 			annotation 	8
 			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$12" @127
-			location   	(1236, 780)
+		    (object ClassView "Class" "Logical View::AdCacheManager" @136
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(496, 384)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@136
+			    location   	(263, 203)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	466
+			    justify    	0
+			    label      	"AdCacheManager")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A9E607601C7"
+			compartment 	(object Compartment
+			    Parent_View 	@136
+			    location   	(263, 264)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	6
+			    max_width  	463
+			    justify    	1)
+			width      	484
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$9" @137
+			location   	(890, 356)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A9E65C20316"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @138
+				Parent_View 	@137
+				location   	(-6, -60)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A9E65C300E8"
+				client     	@137
+				supplier   	@134
+				vertices   	(list Points
+				    (890, 356)
+				    (1042, 346))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @139
+				Parent_View 	@137
+				location   	(-6, -60)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A9E65C300EF"
+				client     	@137
+				supplier   	@136
+				vertices   	(list Points
+				    (890, 356)
+				    (738, 367))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @140
+			location   	(687, 684)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -3074,29 +3711,633 @@
 			line_color 	3342489
 			quidu      	"5A9E65D10065"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$13" @128
-				Parent_View 	@127
-				location   	(420, 428)
+			    (object RoleView "$UNNAMED$13" @141
+				Parent_View 	@140
+				location   	(-129, 332)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5A9E65D101C0"
-				client     	@127
-				supplier   	@126
+				client     	@140
+				supplier   	@135
 				vertices   	(list Points
-				    (1236, 780)
-				    (1411, 951))
+				    (687, 684)
+				    (755, 791))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$14" @129
-				Parent_View 	@127
-				location   	(420, 428)
+			    (object RoleView "$UNNAMED$14" @142
+				Parent_View 	@140
+				location   	(-129, 332)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5A9E65D101C8"
-				client     	@127
-				supplier   	@122
+				client     	@140
+				supplier   	@136
 				vertices   	(list Points
-				    (1236, 780)
-				    (1061, 609))
+				    (687, 684)
+				    (619, 577))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::IUniplayerDataAdCache__" @143
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2384, 480)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@143
+			    location   	(2134, 299)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	500
+			    justify    	0
+			    label      	"IUniplayerDataAdCache__")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0DB5E002E"
+			compartment 	(object Compartment
+			    Parent_View 	@143
+			    location   	(2134, 360)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	6
+			    max_width  	459
+			    justify    	1)
+			width      	518
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)))
+	    (object ClassDiagram "Interface_New"
+		quid       	"5AA0DEBD0251"
+		title      	"Interface_New"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::AdCacheManager" @144
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(352, 352)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@144
+			    location   	(119, 171)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	466
+			    justify    	0
+			    label      	"AdCacheManager")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A9E607601C7"
+			compartment 	(object Compartment
+			    Parent_View 	@144
+			    location   	(119, 232)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	6
+			    max_width  	463
+			    justify    	1)
+			width      	484
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::IUniplayerDataAdCache" @145
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1392, 208)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@145
+			    location   	(1391, 316)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	433
+			    justify    	0
+			    label      	"IUniplayerDataAdCache")
+			icon       	"Interface"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E0E40194"
+			compartment 	(object Compartment
+			    Parent_View 	@145
+			    location   	(1160, 357)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	459
+			    justify    	0)
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::AdLocalCacheFileManager" @146
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2208, 1376)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@146
+			    location   	(1950, 1325)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	516
+			    justify    	0
+			    label      	"AdLocalCacheFileManager")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E25D0376"
+			width      	534
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::UniplayerDataAdCache" @147
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1392, 1104)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@147
+			    location   	(1159, 923)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	466
+			    justify    	0
+			    label      	"UniplayerDataAdCache")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0DFFE03A7"
+			compartment 	(object Compartment
+			    Parent_View 	@147
+			    location   	(1159, 984)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	6
+			    max_width  	468
+			    justify    	1)
+			width      	484
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)
+		    (object RealizeView "" @148
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E16B028E"
+			client     	@147
+			supplier   	@145
+			vertices   	(list Points
+			    (1392, 910)
+			    (1392, 656))
+			line_style 	0)
+		    (object AssociationViewNew "$UNNAMED$18" @149
+			location   	(1826, 1248)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E2AE0394"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @150
+				Parent_View 	@149
+				location   	(98, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E2AF02A0"
+				client     	@149
+				supplier   	@146
+				vertices   	(list Points
+				    (1826, 1248)
+				    (2018, 1312))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @151
+				Parent_View 	@149
+				location   	(98, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E2AF02A6"
+				client     	@149
+				supplier   	@147
+				vertices   	(list Points
+				    (1826, 1248)
+				    (1634, 1184))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::AdDownloader" @152
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2416, 704)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@152
+			    location   	(2268, 573)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	296
+			    justify    	0
+			    label      	"AdDownloader")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A9E62C0029F"
+			compartment 	(object Compartment
+			    Parent_View 	@152
+			    location   	(2268, 634)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	4
+			    max_width  	234
+			    justify    	1)
+			width      	314
+			height     	286
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$21" @153
+			location   	(1946, 887)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E2E402DF"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @154
+				Parent_View 	@153
+				location   	(218, -361)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E2E5004A"
+				client     	@153
+				supplier   	@152
+				vertices   	(list Points
+				    (1946, 887)
+				    (2258, 765))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @155
+				Parent_View 	@153
+				location   	(218, -361)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E2E50059"
+				client     	@153
+				supplier   	@147
+				vertices   	(list Points
+				    (1946, 887)
+				    (1634, 1009))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::LocalTsComponent" @156
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3472, 1808)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@156
+			    location   	(3283, 1757)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	378
+			    justify    	0
+			    label      	"LocalTsComponent")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E62F01CF"
+			width      	396
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::RawF4vComponent" @157
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3440, 1408)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@157
+			    location   	(3250, 1357)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	380
+			    justify    	0
+			    label      	"RawF4vComponent")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E6080380"
+			width      	398
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::F4vToHlsComponent" @158
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3344, 1024)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@158
+			    location   	(3141, 973)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	406
+			    justify    	0
+			    label      	"F4vToHlsComponent")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E5F50201"
+			width      	424
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::CacheToLocalFile" @159
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2736, 1872)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@159
+			    location   	(2555, 1821)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	362
+			    justify    	0
+			    label      	"CacheToLocalFile")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5AA0E64700FE"
+			width      	380
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$27" @160
+			location   	(3099, 1840)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E66B02AF"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @161
+				Parent_View 	@160
+				location   	(-357, 80)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E66C0160"
+				client     	@160
+				supplier   	@159
+				vertices   	(list Points
+				    (3099, 1840)
+				    (2926, 1855))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @162
+				Parent_View 	@160
+				location   	(-357, 80)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E66C0166"
+				client     	@160
+				supplier   	@156
+				vertices   	(list Points
+				    (3099, 1840)
+				    (3273, 1825))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$30" @163
+			location   	(3087, 1639)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E6760076"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @164
+				Parent_View 	@163
+				location   	(-353, 263)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E6760360"
+				client     	@163
+				supplier   	@159
+				vertices   	(list Points
+				    (3087, 1639)
+				    (2831, 1808))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @165
+				Parent_View 	@163
+				location   	(-353, 263)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E6760367"
+				client     	@163
+				supplier   	@157
+				vertices   	(list Points
+				    (3087, 1639)
+				    (3343, 1471))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @166
+			location   	(3038, 1447)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5AA0E6860348"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @167
+				Parent_View 	@166
+				location   	(-418, 359)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E68702A7"
+				client     	@166
+				supplier   	@159
+				vertices   	(list Points
+				    (3038, 1447)
+				    (2780, 1808))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @168
+				Parent_View 	@166
+				location   	(-418, 359)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AA0E68702AF"
+				client     	@166
+				supplier   	@158
+				vertices   	(list Points
+				    (3038, 1447)
+				    (3297, 1087))
 				line_style 	0)))))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"39C9260C00D7"
