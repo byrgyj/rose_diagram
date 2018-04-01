@@ -150,7 +150,40 @@
 		(object Decision "$UNNAMED$2"
 		    quid       	"5AA0A8650386")
 		(object Decision "$UNNAMED$3"
-		    quid       	"5AA0A9520246"))
+		    quid       	"5AA0A9520246")
+		(object State "         Remux"
+		    quid       	"5AC0DAB702A1"
+		    type       	"Normal")
+		(object State "Video(ts)"
+		    quid       	"5AC0DB650024"
+		    type       	"Normal")
+		(object State "Audio(mp4)"
+		    quid       	"5AC0DB690306"
+		    type       	"Normal")
+		(object State "NewFile(ts)"
+		    quid       	"5AC0DB870374"
+		    type       	"Normal")
+		(object State "                                                                                                                                                                                UniplayerSdk"
+		    quid       	"5AC0DE26038B"
+		    type       	"Normal")
+		(object State "Dolby"
+		    quid       	"5AC0DEC503C0"
+		    type       	"Normal")
+		(object State "Ad"
+		    quid       	"5AC0DEF602F6"
+		    type       	"Normal")
+		(object State "ChinaDrm"
+		    quid       	"5AC0DEFF0051"
+		    type       	"Normal")
+		(object State "HCDN"
+		    quid       	"5AC0DF0102C3"
+		    type       	"Normal")
+		(object State "RawTs"
+		    quid       	"5AC0DF2A0383"
+		    type       	"Normal")
+		(object State "LocalServer (Libmicrohttpd)"
+		    quid       	"5AC0DE9A0343"
+		    type       	"Normal"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
@@ -313,7 +346,31 @@
 		    client     	"Logical View::State/Activity Model::FFmpeg Run"
 		    client_quidu 	"5AA0A630014E"
 		    sendEvent  	(object sendEvent
-			quid       	"5AA0A97E015B")))
+			quid       	"5AA0A97E015B"))
+		(object State_Transition
+		    quid       	"5AC0DBA1015A"
+		    supplier   	"Logical View::State/Activity Model::         Remux"
+		    supplier_quidu 	"5AC0DAB702A1"
+		    client     	"Logical View::State/Activity Model::Video(ts)"
+		    client_quidu 	"5AC0DB650024"
+		    sendEvent  	(object sendEvent
+			quid       	"5AC0DBA1015D"))
+		(object State_Transition
+		    quid       	"5AC0DBA5015F"
+		    supplier   	"Logical View::State/Activity Model::         Remux"
+		    supplier_quidu 	"5AC0DAB702A1"
+		    client     	"Logical View::State/Activity Model::Audio(mp4)"
+		    client_quidu 	"5AC0DB690306"
+		    sendEvent  	(object sendEvent
+			quid       	"5AC0DBA50162"))
+		(object State_Transition
+		    quid       	"5AC0DBAB00E3"
+		    supplier   	"Logical View::State/Activity Model::NewFile(ts)"
+		    supplier_quidu 	"5AC0DB870374"
+		    client     	"Logical View::State/Activity Model::         Remux"
+		    client_quidu 	"5AC0DAB702A1"
+		    sendEvent  	(object sendEvent
+			quid       	"5AC0DBAB00E6")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
 		(object ActivityDiagram "DolbyVision"
@@ -1027,7 +1084,550 @@
 			    nlines     	1
 			    max_width  	319
 			    justify    	1
-			    label      	"notify  stop")))))
+			    label      	"notify  stop")))
+		(object ActivityDiagram "Dolby"
+		    quid       	"5AC0DA5502E6"
+		    title      	"Dolby"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object Swimlane "" @41
+			    line_color 	3342489
+			    width      	450)
+			(object StateView "Normal" "         Remux" @42
+			    Parent_View 	@41
+			    location   	(1190, 652)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@42
+				location   	(1190, 636)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"         Remux")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DAB702A1"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Video(ts)" @43
+			    Parent_View 	@41
+			    location   	(917, 352)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@43
+				location   	(917, 336)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Video(ts)")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DB650024"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @44
+			    stereotype 	TRUE
+			    line_color 	16744448
+			    quidu      	"5AC0DBA1015A"
+			    client     	@43
+			    supplier   	@42
+			    vertices   	(list Points
+				(977, 419)
+				(1129, 585))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Audio(mp4)" @45
+			    Parent_View 	@41
+			    location   	(1482, 353)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@45
+				location   	(1482, 337)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Audio(mp4)")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DB690306"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @46
+			    stereotype 	TRUE
+			    line_color 	16744448
+			    quidu      	"5AC0DBA5015F"
+			    client     	@45
+			    supplier   	@42
+			    vertices   	(list Points
+				(1416, 419)
+				(1255, 584))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "NewFile(ts)" @47
+			    Parent_View 	@41
+			    location   	(1184, 943)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@47
+				location   	(1184, 927)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"NewFile(ts)")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DB870374"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @48
+			    stereotype 	TRUE
+			    line_color 	16744448
+			    quidu      	"5AC0DBAB00E3"
+			    client     	@42
+			    supplier   	@47
+			    vertices   	(list Points
+				(1188, 719)
+				(1185, 875))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object NoteView @49
+			    Parent_View 	@41
+			    location   	(2512, 341)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@49
+				location   	(2374, 281)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	240
+				justify    	1
+				label      	"source input")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	300
+			    height     	132)
+			(object AttachView "" @50
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@45
+			    supplier   	@49
+			    vertices   	(list Points
+				(1632, 351)
+				(2361, 342))
+			    line_style 	0)
+			(object NoteView @51
+			    Parent_View 	@41
+			    location   	(2540, 660)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@51
+				location   	(2375, 601)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	295
+				justify    	1
+				label      	"ffmpeg operation")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	355
+			    height     	130)
+			(object NoteView @52
+			    Parent_View 	@41
+			    location   	(2519, 943)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@52
+				location   	(2381, 883)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	240
+				justify    	1
+				label      	"output")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	300
+			    height     	132)
+			(object AttachView "" @53
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@42
+			    supplier   	@51
+			    vertices   	(list Points
+				(1340, 652)
+				(2362, 658))
+			    line_style 	0)
+			(object AttachView "" @54
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@47
+			    supplier   	@52
+			    vertices   	(list Points
+				(1334, 943)
+				(2368, 943))
+			    line_style 	0)))
+		(object ActivityDiagram "LocalServer"
+		    quid       	"5AC0DE14021B"
+		    title      	"LocalServer"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	58
+		    items      	(list diagram_item_list
+			(object Swimlane "" @55
+			    line_color 	3342489
+			    width      	450)
+			(object StateView "Normal" "                                                                                                                                                                                UniplayerSdk" @56
+			    Parent_View 	@55
+			    location   	(1558, 883)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@56
+				location   	(1558, 812)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	1824
+				justify    	0
+				label      	"                                                                                                                                                                                UniplayerSdk")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DE26038B"
+			    width      	1920
+			    height     	244
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Dolby" @57
+			    Parent_View 	@55
+			    location   	(896, 554)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@57
+				location   	(896, 538)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	278
+				justify    	0
+				label      	"Dolby")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DEC503C0"
+			    width      	374
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Ad" @58
+			    Parent_View 	@55
+			    location   	(1235, 553)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@58
+				location   	(1235, 537)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Ad")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DEF602F6"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "ChinaDrm" @59
+			    Parent_View 	@55
+			    location   	(1537, 554)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@59
+				location   	(1537, 538)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"ChinaDrm")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DEFF0051"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "HCDN" @60
+			    Parent_View 	@55
+			    location   	(1842, 553)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@60
+				location   	(1842, 537)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"HCDN")
+			    icon_style 	"Label"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DF0102C3"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "RawTs" @61
+			    Parent_View 	@55
+			    location   	(2146, 553)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@61
+				location   	(2146, 537)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"RawTs")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DF2A0383"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "LocalServer (Libmicrohttpd)" @62
+			    Parent_View 	@55
+			    location   	(1540, 691)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@62
+				location   	(1540, 672)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	1608
+				justify    	0
+				label      	"LocalServer (Libmicrohttpd)")
+			    icon_style 	"Icon"
+			    line_color 	16744448
+			    fill_color 	16777215
+			    quidu      	"5AC0DE9A0343"
+			    width      	1704
+			    height     	140
+			    autoResize 	TRUE)
+			(object NoteView @63
+			    Parent_View 	@55
+			    location   	(3057, 549)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@63
+				location   	(2909, 490)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	260
+				justify    	1
+				label      	"modules")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	320
+			    height     	130)
+			(object AttachView "" @64
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@61
+			    supplier   	@63
+			    vertices   	(list Points
+				(2296, 552)
+				(2896, 549))
+			    line_style 	0)
+			(object NoteView @65
+			    Parent_View 	@55
+			    location   	(3056, 697)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@65
+				location   	(2918, 637)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	240
+				justify    	1
+				label      	"server")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	300
+			    height     	132)
+			(object AttachView "" @66
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@62
+			    supplier   	@65
+			    vertices   	(list Points
+				(2392, 694)
+				(2905, 696))
+			    line_style 	0)
+			(object NoteView @67
+			    Parent_View 	@55
+			    location   	(3057, 894)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@67
+				location   	(2919, 834)
+				fill_color 	13434879
+				nlines     	2
+				max_width  	240
+				justify    	1
+				label      	"sdk")
+			    line_color 	3342489
+			    fill_color 	13434879
+			    width      	300
+			    height     	132)
+			(object AttachView "" @68
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    client     	@56
+			    supplier   	@67
+			    vertices   	(list Points
+				(2518, 890)
+				(2906, 892))
+			    line_style 	0)))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"5A6598720181"
@@ -1038,7 +1638,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::NewClass" @41
+		    (object ClassView "Class" "Logical View::NewClass" @69
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -1053,19 +1653,19 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@41
-			    location   	(311, 183)
+			    Parent_View 	@69
+			    location   	(315, 188)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	228
+			    max_width  	220
 			    justify    	0
 			    label      	"NewClass")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5A6598E2025C"
-			width      	246
-			height     	126
+			width      	238
+			height     	114
 			annotation 	8
 			autoResize 	TRUE)))))
     root_subsystem 	(object SubSystem "Component View"
@@ -2716,7 +3316,7 @@
 		    (object Attribute
 			tool       	"Java"
 			name       	"ClassPath"
-			value      	"D:\\Program Files\\Java\\jdk1.8.0_92\\lib;;D:\\Program Files (x86)\\Java\\jdk1.8.0_111\\jre\\lib\\rt.jar;D:\\Program Files (x86)\\Java\\jdk1.8.0_111\\lib\\dt.jar;D:\\Program Files (x86)\\Java\\jdk1.8.0_111\\lib\\tools.jar")
+			value      	"")
 		    (object Attribute
 			tool       	"Java"
 			name       	"ReferenceClasspath"
